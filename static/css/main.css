@@ -1,25 +1,26 @@
 /* ============================================
-   SANSKRIT KAVYA KOSHA — Main Stylesheet
-   Dark Gold Theme
+   SANSKRIT KAVYA LOK — Main Stylesheet
+   Sunset Purple Theme
    ============================================ */
+
 :root {
-  --accent:        #c0392b;        /* deep red — primary actions */
-  --accent-light:  #e05540;        /* hover red */
-  --gold:          #e8b87a;        /* primary gold */
-  --gold-light:    #f5d9a0;        /* lighter gold for headings */
-  --gold-dim:      #c9906a;        /* muted gold */
+  --accent:        #d04090;        /* magenta-pink — primary actions */
+  --accent-light:  #e860a8;        /* lighter pink hover */
+  --gold:          #f0c080;        /* warm gold from sun glow */
+  --gold-light:    #f8dca0;        /* pale gold for headings */
+  --gold-dim:      #c898c0;        /* muted rose-gold */
 
-  --bg:            #1a0e08;        /* near-black dark brown */
-  --bg-card:       #221208;        /* card background */
-  --bg-elevated:   #2c1810;        /* slightly lighter panels */
-  --bg-header:     #120804;        /* header — darkest */
+  --bg:            #160828;        /* deep indigo-black — ocean shadows */
+  --bg-card:       #200d38;        /* dark violet card */
+  --bg-elevated:   #2a1248;        /* slightly lighter purple panel */
+  --bg-header:     #0e0518;        /* near-black header */
 
-  --text:          #f0e0c8;        /* warm off-white body text */
-  --text-light:    #a07858;        /* muted warm tan */
-  --text-dim:      #7a5c44;        /* very muted */
+  --text:          #f5e8f8;        /* soft lavender-white body text */
+  --text-light:    #c090c8;        /* muted rose-purple */
+  --text-dim:      #8058a0;        /* very muted purple */
 
-  --border:        #3d2215;        /* dark border */
-  --border-light:  #5a3020;        /* slightly lighter border */
+  --border:        #3a1858;        /* dark purple border */
+  --border-light:  #582878;        /* slightly lighter purple border */
 
   --font-hi:       'Tiro Devanagari Sanskrit', serif;
   --font-en:       'Lora', Georgia, serif;
@@ -207,7 +208,7 @@ body {
 .poet-thumb-placeholder {
   width: 80px; height: 80px;
   border-radius: 50%;
-  background: #3b0a0a;
+  background: #2a0848;
   color: var(--gold);
   display: flex; align-items: center; justify-content: center;
   font-size: 2rem;
@@ -414,7 +415,7 @@ body {
   background: var(--bg-card);
 }
 .pagination .active {
-  background: #3b0a0a;
+  background: #2a0848;
   color: var(--gold);
   border-color: var(--border-light);
 }
@@ -442,7 +443,7 @@ body {
   transition: all 0.2s;
 }
 .form-tab:hover { border-color: var(--gold-dim); color: var(--gold); }
-.form-tab.active { background: #3b0a0a; color: var(--gold); border-color: var(--border-light); }
+.form-tab.active { background: #2a0848; color: var(--gold); border-color: var(--border-light); }
 .form-tab .count { font-size: 0.75rem; opacity: 0.8; }
 .form-badge {
   display: inline-block;
@@ -504,7 +505,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #3b0a0a 0%, #1a0505 100%);
+  background: linear-gradient(135deg, #2a0848 0%, #100320 100%);
   color: rgba(232,184,122,0.3);
   font-size: 4rem;
   font-family: var(--font-hi);
@@ -579,7 +580,7 @@ body {
   padding-bottom: 0.5rem;
 }
 .count-badge {
-  background: #3b0a0a;
+  background: #2a0848;
   color: var(--gold);
   border: 1px solid var(--border-light);
   font-size: 0.8rem;
@@ -598,7 +599,7 @@ body {
 <style>
 /* ─── HERO ────────────────────────────────────────────── */
 .rk-hero {
-  background: linear-gradient(160deg, #0d0400 0%, #2a0808 45%, #1a0505 100%);
+  background: linear-gradient(160deg, #0d0400 0%, #2a0808 45%, #100320 100%);
   color: #f0e0c8;
   padding: 5rem 2rem 4.5rem;
   text-align: center;
@@ -715,7 +716,7 @@ body {
 
 /* ─── STATS STRIP ─────────────────────────────────────── */
 .rk-stats-strip {
-  background: #110600;
+  background: #0a0418;
   border-bottom: 1px solid var(--border);
   margin: 0 -1.5rem 2.5rem;
 }
@@ -813,7 +814,7 @@ body {
   gap: 1rem;
 }
 .rk-poem-row:last-child { border-bottom: none; }
-.rk-poem-row:hover { background: #2c1408; padding-left: 1.6rem; }
+.rk-poem-row:hover { background: #1e0a38; padding-left: 1.6rem; }
 .rk-poem-row-text { flex: 1; min-width: 0; }
 .rk-poem-row-title {
   font-size: 1.05rem;
@@ -865,7 +866,7 @@ body {
   background-position: center;
 }
 .rk-collection-banner-gradient {
-  background: linear-gradient(135deg, #3b0a0a 0%, #1a0505 100%);
+  background: linear-gradient(135deg, #2a0848 0%, #100320 100%);
 }
 .rk-collection-banner-body {
   padding: 1.5rem 1.75rem;
@@ -903,7 +904,7 @@ body {
   font-size: 0.9rem;
   transition: all 0.2s;
 }
-.rk-theme-pill:hover { background: #3b0a0a; color: var(--gold); border-color: var(--border-light); }
+.rk-theme-pill:hover { background: #2a0848; color: var(--gold); border-color: var(--border-light); }
 .rk-theme-count {
   font-size: 0.68rem;
   background: rgba(232,184,122,0.08);
@@ -932,7 +933,7 @@ body {
 
 /* WOTD */
 .rk-wotd {
-  background: linear-gradient(145deg, #150800, #220d05);
+  background: linear-gradient(145deg, #0e0420, #220d05);
   border-color: #3d1a0a;
 }
 .rk-wotd .rk-widget-label { color: var(--gold-dim); opacity: 0.7; }
@@ -986,7 +987,7 @@ body {
 .rk-poet-avatar-fallback {
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: #3b0a0a;
+  background: #2a0848;
   color: var(--gold);
   border: 2px solid var(--border-light);
   display: flex; align-items: center; justify-content: center;
@@ -1037,7 +1038,7 @@ body {
   width: 48px; height: 48px;
   border-radius: 6px;
   overflow: hidden;
-  background: #3b0a0a;
+  background: #2a0848;
   flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--border-light);
@@ -1050,7 +1051,7 @@ body {
 
 /* ─── INTERLUDE ───────────────────────────────────────── */
 .rk-interlude {
-  background: linear-gradient(135deg, #110600 0%, #1e0a04 50%, #110600 100%);
+  background: linear-gradient(135deg, #0a0418 0%, #1e0a04 50%, #0a0418 100%);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   margin: 0 -1.5rem 0;
