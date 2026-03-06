@@ -1,0 +1,37 @@
+{{ define "main" }}
+<article class="poet-page">
+  <header class="poet-header">
+    {{ with .Params.image }}
+    <div class="poet-image">
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+    </div>
+    {{ end }}
+    <div class="poet-meta">
+      <h1>
+        <span class="lang-hi">{{ .Title }}</span>
+        <span class="lang-en">{{ .Params.title_en | default .Title }}</span>
+      </h1>
+      {{ with .Params.dates }}<p class="dates">{{ . }}</p>{{ end }}
+      {{ with .Params.region }}<p class="region">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+  <div class="poet-bio">
+    {{ .Content }}
+  </div>
+  {{ $poet := .Title }}
+  {{ $poems := where .Site.RegularPages "Params.poet" $poet }}
+  {{ if $poems }}
+  <section class="poet-poems">
+    <h2>
+      <span class="lang-hi">रचनाएँ</span>
+      <span class="lang-en">Works</span>
+    </h2>
+    <div class="poem-grid">
+      {{ range $poems }}
+      {{ partial "poem-card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</article>
+{{ end }}

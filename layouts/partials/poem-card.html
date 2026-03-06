@@ -1,0 +1,22 @@
+<div class="poem-card">
+  <a href="{{ .Permalink }}" class="poem-card-link">
+    <h3 class="card-title">{{ .Title }}</h3>
+    {{ with .Params.poet }}
+    <p class="card-poet">{{ . }}</p>
+    {{ end }}
+    {{ if .Params.themes }}
+      {{ $themes := .Params.themes }}
+      {{ if not (reflect.IsSlice $themes) }}
+        {{ $themes = slice (string $themes) }}
+      {{ end }}
+      <div class="card-themes">
+        {{ range first 2 $themes }}
+        <span class="theme-tag mini">{{ . }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ if .Params.audio_url }}
+    <span class="audio-badge">🎵 पाठ उपलब्ध</span>
+    {{ end }}
+  </a>
+</div>

@@ -1,0 +1,38 @@
+{{ define "main" }}
+<article class="poem-page">
+  <header class="poem-header">
+    <h1 class="poem-title">{{ .Title }}</h1>
+    {{ with .Params.poet }}
+    <p class="poem-poet">
+      <a href="/poets/{{ . | urlize }}/">{{ . }}</a>
+    </p>
+    {{ end }}
+    {{ if .Params.themes }}
+      {{ $themes := .Params.themes }}
+      {{ if not (reflect.IsSlice $themes) }}
+        {{ $themes = slice (string $themes) }}
+      {{ end }}
+      <div class="poem-themes">
+        {{ range $themes }}
+        <a href="/themes/{{ . | urlize }}/" class="theme-tag">{{ . }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </header>
+  <div class="poem-body" id="poem-text">
+    {{ .Content }}
+  </div>
+  {{ with .Params.audio_url }}
+  <section class="poem-audio">
+    <h3>पाठ सुनें <span class="en">Listen</span></h3>
+    <iframe src="{{ . }}" width="100%" height="80" frameborder="0" allowfullscreen></iframe>
+  </section>
+  {{ end }}
+  {{ with .Params.notes }}
+  <section class="poem-notes">
+    <h3>टिप्पणी <span class="en">Notes</span></h3>
+    <p>{{ . }}</p>
+  </section>
+  {{ end }}
+</article>
+{{ end }}

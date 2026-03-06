@@ -1,0 +1,295 @@
+{{ define "main" }}
+
+<!-- ══════════════════════════════════════════════════════
+     HERO — Featured Verse
+     ══════════════════════════════════════════════════════ -->
+<section class="rk-hero">
+  <div class="rk-hero-inner">
+    <p class="rk-hero-label">
+      <span class="lang-hi">आज का श्लोक</span>
+      <span class="lang-en">Verse of the Day</span>
+    </p>
+    <blockquote class="rk-hero-verse">
+      <!-- Replace with a Sanskrit verse of your choice -->
+      काव्यशास्त्रविनोदेन कालो गच्छति धीमताम्।<br>
+      व्यसनेन च मूर्खाणां निद्रया कलहेन वा॥
+    </blockquote>
+    <p class="rk-hero-attribution">
+      — <span class="lang-hi">सुभाषितम्</span><span class="lang-en">Subhāṣita</span>
+      <span class="rk-hero-form">श्लोक</span>
+    </p>
+    <div class="rk-hero-actions">
+      <a href="/poems/" class="rk-btn-primary">
+        <span class="lang-hi">सभी काव्यानि पढ़ें</span>
+        <span class="lang-en">Read All Poems</span>
+      </a>
+      <a href="/search/" class="rk-btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="lang-hi">खोजें</span>
+        <span class="lang-en">Search</span>
+      </a>
+    </div>
+  </div>
+  <div class="rk-hero-ornament" aria-hidden="true">॥</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     STATS STRIP
+     ══════════════════════════════════════════════════════ -->
+<div class="rk-stats-strip">
+  <div class="rk-stats-inner">
+    <div class="rk-stat">
+      <span class="rk-stat-num">{{ len (where .Site.RegularPages "Type" "poems") }}</span>
+      <span class="rk-stat-label lang-hi">काव्यानि</span>
+      <span class="rk-stat-label lang-en">Poems</span>
+    </div>
+    <div class="rk-stat-divider"></div>
+    <div class="rk-stat">
+      <span class="rk-stat-num">{{ len (where .Site.RegularPages "Type" "poets") }}</span>
+      <span class="rk-stat-label lang-hi">कवयः</span>
+      <span class="rk-stat-label lang-en">Poets</span>
+    </div>
+    <div class="rk-stat-divider"></div>
+    <div class="rk-stat">
+      <span class="rk-stat-num">{{ len (where .Site.RegularPages "Type" "collections") }}</span>
+      <span class="rk-stat-label lang-hi">संग्रहाः</span>
+      <span class="rk-stat-label lang-en">Collections</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     MAIN CONTENT GRID
+     ══════════════════════════════════════════════════════ -->
+<div class="rk-layout">
+
+  <!-- ── LEFT / MAIN COLUMN ── -->
+  <div class="rk-main-col">
+
+    <!-- RECENT POEMS -->
+    <section class="rk-section">
+      <div class="rk-section-head">
+        <h2 class="rk-section-title">
+          <span class="lang-hi">नवीनतम काव्यानि</span>
+          <span class="lang-en">Recent Poems</span>
+        </h2>
+        <a href="/poems/" class="rk-see-all">
+          <span class="lang-hi">सभी देखें</span>
+          <span class="lang-en">See all</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="rk-poem-list">
+        {{ range first 6 (where .Site.RegularPages "Type" "poems") }}
+        <a href="{{ .Permalink }}" class="rk-poem-row">
+          <div class="rk-poem-row-text">
+            <h3 class="rk-poem-row-title">{{ .Title }}</h3>
+            {{ with .Params.poet }}
+            <p class="rk-poem-row-poet">{{ . }}</p>
+            {{ end }}
+          </div>
+          <div class="rk-poem-row-right">
+            {{ with .Params.form }}
+            <span class="rk-form-badge">{{ . }}</span>
+            {{ end }}
+            {{ if .Params.audio_url }}
+            <span class="rk-audio-dot" title="Audio available">🎵</span>
+            {{ end }}
+            <svg class="rk-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- FEATURED COLLECTION -->
+    {{ $collections := where .Site.RegularPages "Type" "collections" }}
+    {{ with index $collections 0 }}
+    <section class="rk-section rk-featured-collection">
+      <div class="rk-section-head">
+        <h2 class="rk-section-title">
+          <span class="lang-hi">विशेष संग्रह</span>
+          <span class="lang-en">Featured Collection</span>
+        </h2>
+      </div>
+      <a href="{{ .Permalink }}" class="rk-collection-banner">
+        {{ with .Params.image }}
+        <div class="rk-collection-banner-img" style="background-image: url('{{ . }}')"></div>
+        {{ else }}
+        <div class="rk-collection-banner-img rk-collection-banner-gradient"></div>
+        {{ end }}
+        <div class="rk-collection-banner-body">
+          <p class="rk-collection-eyebrow lang-hi">संग्रह</p>
+          <p class="rk-collection-eyebrow lang-en">Collection</p>
+          <h3 class="rk-collection-banner-title">{{ .Title }}</h3>
+          {{ with .Params.description }}
+          <p class="rk-collection-banner-desc">{{ . }}</p>
+          {{ end }}
+          <span class="rk-collection-banner-cta lang-hi">संग्रह खोलें →</span>
+          <span class="rk-collection-banner-cta lang-en">Open Collection →</span>
+        </div>
+      </a>
+    </section>
+    {{ end }}
+
+    <!-- THEMES -->
+    <section class="rk-section">
+      <div class="rk-section-head">
+        <h2 class="rk-section-title">
+          <span class="lang-hi">विषय के अनुसार</span>
+          <span class="lang-en">Browse by Theme</span>
+        </h2>
+      </div>
+      <div class="rk-theme-cloud">
+        {{ range .Site.Taxonomies.themes }}
+        <a href="{{ .Page.Permalink }}" class="rk-theme-pill">
+          <span class="lang-hi">{{ .Page.Title }}</span>
+          <span class="lang-en">{{ .Page.Params.title_en | default .Page.Title }}</span>
+          <span class="rk-theme-count">{{ .Count }}</span>
+        </a>
+        {{ end }}
+      </div>
+    </section>
+
+  </div><!-- /rk-main-col -->
+
+  <!-- ── RIGHT / SIDEBAR ── -->
+  <aside class="rk-sidebar">
+
+    <!-- WORD OF THE DAY -->
+    <div class="rk-widget rk-wotd">
+      <p class="rk-widget-label lang-hi">शब्द का अर्थ</p>
+      <p class="rk-widget-label lang-en">Word of the Day</p>
+      <div class="rk-wotd-word">काव्यम्</div>
+      <div class="rk-wotd-meaning lang-en">poetry · literary composition</div>
+      <div class="rk-wotd-meaning lang-hi">काव्य, साहित्यिक रचना</div>
+      <a href="/search/?q=काव्यम्" class="rk-wotd-link lang-hi">इस शब्द की कविताएँ →</a>
+      <a href="/search/?q=काव्यम्" class="rk-wotd-link lang-en">Poems with this word →</a>
+    </div>
+
+    <!-- RECOMMENDED POETS -->
+    <div class="rk-widget">
+      <div class="rk-section-head" style="margin-bottom:1rem">
+        <h2 class="rk-section-title" style="font-size:1rem">
+          <span class="lang-hi">कवि परिचय</span>
+          <span class="lang-en">Meet the Poets</span>
+        </h2>
+        <a href="/poets/" class="rk-see-all">
+          <span class="lang-hi">सभी</span>
+          <span class="lang-en">All</span>
+        </a>
+      </div>
+      <div class="rk-poet-stack">
+        {{ range first 4 (where .Site.RegularPages "Type" "poets") }}
+        <a href="{{ .Permalink }}" class="rk-poet-row">
+          {{ with .Params.image }}
+          <img src="{{ . }}" alt="{{ $.Title }}" class="rk-poet-avatar">
+          {{ else }}
+          <div class="rk-poet-avatar rk-poet-avatar-fallback">{{ substr .Title 0 1 }}</div>
+          {{ end }}
+          <div class="rk-poet-row-info">
+            <span class="rk-poet-row-name">{{ .Title }}</span>
+            {{ with .Params.dates }}<span class="rk-poet-row-dates">{{ . }}</span>{{ end }}
+          </div>
+          <svg class="rk-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- FORMS GLOSSARY -->
+    <div class="rk-widget rk-forms-widget">
+      <p class="rk-widget-label lang-hi">काव्य-रूपम्</p>
+      <p class="rk-widget-label lang-en">Poetic Forms</p>
+      <ul class="rk-forms-list">
+        <li>
+          <span class="rk-form-name">अनुष्टुप्</span>
+          <span class="rk-form-en">Anuṣṭup</span>
+          <p class="rk-form-desc lang-en">The most common Sanskrit metre, 8 syllables per quarter</p>
+          <p class="rk-form-desc lang-hi">संस्कृत का सर्वाधिक प्रचलित छन्द, प्रत्येक पाद में 8 अक्षर</p>
+        </li>
+        <li>
+          <span class="rk-form-name">शार्दूलविक्रीडित</span>
+          <span class="rk-form-en">Śārdūlavikrīḍita</span>
+          <p class="rk-form-desc lang-en">A stately metre of 19 syllables per quarter</p>
+          <p class="rk-form-desc lang-hi">19 अक्षर प्रति पाद का गम्भीर छन्द</p>
+        </li>
+        <li>
+          <span class="rk-form-name">मन्दाक्रान्ता</span>
+          <span class="rk-form-en">Mandākrāntā</span>
+          <p class="rk-form-desc lang-en">A lyrical metre of 17 syllables, beloved in love poetry</p>
+          <p class="rk-form-desc lang-hi">17 अक्षर का मधुर छन्द, शृंगार काव्य में प्रिय</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- COLLECTIONS MINI LIST -->
+    <div class="rk-widget">
+      <div class="rk-section-head" style="margin-bottom:1rem">
+        <h2 class="rk-section-title" style="font-size:1rem">
+          <span class="lang-hi">संग्रहाः</span>
+          <span class="lang-en">Collections</span>
+        </h2>
+        <a href="/collections/" class="rk-see-all">
+          <span class="lang-hi">सभी</span>
+          <span class="lang-en">All</span>
+        </a>
+      </div>
+      {{ range first 3 (where .Site.RegularPages "Type" "collections") }}
+      <a href="{{ .Permalink }}" class="rk-mini-collection-row">
+        <div class="rk-mini-coll-thumb">
+          {{ with .Params.image }}<img src="{{ . }}" alt="">{{ else }}<span>{{ substr .Title 0 1 }}</span>{{ end }}
+        </div>
+        <div class="rk-mini-coll-info">
+          <span class="rk-mini-coll-title">{{ .Title }}</span>
+          {{ with .Params.description }}<span class="rk-mini-coll-desc">{{ . | truncate 50 }}</span>{{ end }}
+        </div>
+      </a>
+      {{ end }}
+    </div>
+
+  </aside>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     INTERLUDE QUOTE BREAK
+     ══════════════════════════════════════════════════════ -->
+<section class="rk-interlude">
+  <div class="rk-interlude-inner">
+    <div class="rk-interlude-deco" aria-hidden="true">❧</div>
+    <p class="rk-interlude-verse">
+      <!-- Replace with a short Sanskrit verse of your choice -->
+      काव्यशास्त्रविनोदेन कालो गच्छति धीमताम्॥
+    </p>
+    <p class="rk-interlude-attr">— <span class="rk-interlude-attr-en">Subhāṣita</span></p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     ABOUT STRIP
+     ══════════════════════════════════════════════════════ -->
+<section class="rk-about-strip">
+  <div class="rk-about-inner">
+    <div class="rk-about-text">
+      <h2 class="lang-hi">संस्कृत काव्य कोश के बारे में</h2>
+      <h2 class="lang-en">About Sanskrit Kavya Kosha</h2>
+      <p class="lang-hi">
+        यह संग्रह संस्कृत काव्य-परंपरा को संजोने का एक प्रयास है —
+        महाकवियों की रचनाएँ एक स्थान पर, सभी के लिए सुलभ।
+      </p>
+      <p class="lang-en">
+        A digital sanctuary for Sanskrit poetry — preserving the works
+        of the great poets of the classical tradition.
+      </p>
+    </div>
+    <div class="rk-about-links">
+      <a href="/poems/"       class="rk-about-link"><span class="lang-hi">काव्यानि</span><span class="lang-en">Poems</span>      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="/poets/"       class="rk-about-link"><span class="lang-hi">कवयः</span><span class="lang-en">Poets</span>          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="/search/"      class="rk-about-link"><span class="lang-hi">खोज</span><span class="lang-en">Search</span>        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="/collections/" class="rk-about-link"><span class="lang-hi">संग्रहाः</span><span class="lang-en">Collections</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,48 @@
+{{ define "main" }}
+<article class="collection-page">
+  <header class="collection-header">
+    {{ with .Params.image }}
+    <div class="collection-cover">
+      <img src="{{ . }}" alt="{{ $.Title }}">
+    </div>
+    {{ end }}
+    <div class="collection-meta">
+      <p class="breadcrumb"><a href="/collections/">सभी संग्रहाः / All Collections</a></p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}
+      <p class="collection-desc">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+  {{ with .Content }}
+  <div class="collection-body">{{ . }}</div>
+  {{ end }}
+  <section class="collection-poems">
+    <h2>इस संग्रह के काव्यानि <span class="en">Poems in this Collection</span></h2>
+    {{ $poemList := slice }}
+    {{ if .Params.poems }}
+      {{ if reflect.IsSlice .Params.poems }}
+        {{ $poemList = .Params.poems }}
+      {{ else }}
+        {{ $poemList = slice (string .Params.poems) }}
+      {{ end }}
+    {{ end }}
+    {{ if gt (len $poemList) 0 }}
+      <span class="count-badge" style="margin-bottom:1rem;display:inline-block;">{{ len $poemList }}</span>
+      <div class="poem-grid">
+        {{ range $poemList }}
+          {{ $poemTitle := string . }}
+          {{ $found := where $.Site.RegularPages "Title" $poemTitle }}
+          {{ if $found }}
+            {{ range $found }}{{ partial "poem-card.html" . }}{{ end }}
+          {{ else }}
+            <p class="empty-msg">⚠ "{{ $poemTitle }}" — title not matched</p>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="empty-msg">इस संग्रह में अभी कोई काव्य नहीं है। / No poems added yet.</p>
+    {{ end }}
+  </section>
+</article>
+{{ end }}

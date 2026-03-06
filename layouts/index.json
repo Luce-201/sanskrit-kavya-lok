@@ -1,0 +1,25 @@
+{{- $index := slice -}}
+{{- range where .Site.RegularPages "Type" "poems" -}}
+  {{- $entry := dict
+    "type"    "poem"
+    "title"   .Title
+    "url"     .Permalink
+    "poet"    (.Params.poet | default "")
+    "themes"  (.Params.themes | default slice)
+    "form"    (.Params.form | default "")
+    "body"    (.Plain | truncate 500)
+  -}}
+  {{- $index = $index | append $entry -}}
+{{- end -}}
+{{- range where .Site.RegularPages "Type" "poets" -}}
+  {{- $entry := dict
+    "type"   "poet"
+    "title"  .Title
+    "url"    .Permalink
+    "dates"  (.Params.dates | default "")
+    "region" (.Params.region | default "")
+    "body"   (.Plain | truncate 300)
+  -}}
+  {{- $index = $index | append $entry -}}
+{{- end -}}
+{{- $index | jsonify -}}

@@ -1,0 +1,22 @@
+<div class="collection-card">
+  <a href="{{ .Permalink }}" class="collection-card-link">
+    <div class="collection-card-image">
+      {{ with .Params.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{ else }}
+      <div class="collection-img-placeholder">
+        <span>{{ substr $.Title 0 1 }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <div class="collection-card-body">
+      <h3>{{ .Title }}</h3>
+      {{ with .Params.description }}
+      <p class="collection-card-desc">{{ . }}</p>
+      {{ end }}
+      <span class="poem-count">
+        {{ with .Params.poems }}{{ len . }}{{ else }}0{{ end }} काव्यानि / poems
+      </span>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="list-page">
+  <header class="list-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ len .Pages }} items</p>
+  </header>
+  <div class="poem-grid">
+    {{ range .Pages }}
+    {{ if eq .Type "poems" }}
+      {{ partial "poem-card.html" . }}
+    {{ else if eq .Type "poets" }}
+      {{ partial "poet-card.html" . }}
+    {{ else }}
+      <div class="generic-card">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

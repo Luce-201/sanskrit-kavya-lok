@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="list-page">
+  <header class="list-header">
+    <h1>संग्रहाः <span class="en">Collections</span></h1>
+    <p>{{ len .Pages }} संग्रहाः / collections</p>
+  </header>
+  <div class="collection-grid">
+    {{ range .Pages }}
+    {{ partial "collection-card.html" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

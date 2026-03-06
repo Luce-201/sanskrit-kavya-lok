@@ -1,0 +1,491 @@
+{{ define "main" }}
+<div class="rd-page">
+
+  <header class="rd-header">
+    <div class="rd-header-icon" aria-hidden="true">◈</div>
+    <div class="rd-header-text">
+      <h1 class="rd-title">
+        <span class="lang-hi">तुक शब्दकोश</span>
+        <span class="lang-en">Rhyme Dictionary</span>
+      </h1>
+      <p class="rd-subtitle lang-hi">कविता-कोश से तुकबंदी खोजें</p>
+      <p class="rd-subtitle lang-en">Find rhyming words drawn from the Sanskrit poetry corpus</p>
+    </div>
+  </header>
+
+  <!-- Search bar -->
+  <div class="rd-search-zone">
+    <div class="rd-input-wrap">
+      <span class="rd-input-ornament" aria-hidden="true">॥</span>
+      <input
+        type="text"
+        id="rd-input"
+        class="rd-input"
+        placeholder="शब्द लिखें… e.g. मँझारन"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button class="rd-clear" id="rd-clear" aria-label="Clear">✕</button>
+    </div>
+    <p class="rd-hint lang-hi">किसी भी संस्कृत काव्य शब्द को टाइप करें — तुक-मिलान स्वतः होगा</p>
+    <p class="rd-hint lang-en">Type any Braj poetry word — rhyme depth is detected automatically</p>
+  </div>
+
+  <!-- Depth indicator -->
+  <div class="rd-depth-bar" id="rd-depth-bar" style="display:none">
+    <span class="rd-depth-label lang-hi">तुक की गहराई:</span>
+    <span class="rd-depth-label lang-en">Rhyme depth:</span>
+    <div class="rd-depth-pills" id="rd-depth-pills"></div>
+  </div>
+
+  <!-- Stats -->
+  <div class="rd-stats" id="rd-stats"></div>
+
+  <!-- Results -->
+  <div id="rd-results" class="rd-results"></div>
+
+  <!-- Empty / no results states -->
+  <div id="rd-empty" class="rd-empty-state">
+    <div class="rd-empty-glyph" aria-hidden="true">◈</div>
+    <p class="lang-hi">तुक खोजने के लिए एक शब्द टाइप करें</p>
+    <p class="lang-en">Type a word to discover its rhymes in the corpus</p>
+    <div class="rd-example-chips">
+      <span class="rd-chip-label lang-hi">उदाहरण:</span>
+      <span class="rd-chip-label lang-en">Try:</span>
+      <button class="rd-example-chip" data-word="मँझारन">मँझारन</button>
+      <button class="rd-example-chip" data-word="बिहरैं">बिहरैं</button>
+      <button class="rd-example-chip" data-word="नयन">नयन</button>
+      <button class="rd-example-chip" data-word="करैं">करैं</button>
+    </div>
+  </div>
+
+  <div id="rd-no-results" class="rd-empty-state rd-no-results hidden">
+    <div class="rd-empty-glyph" aria-hidden="true">😔</div>
+    <p class="lang-hi" id="rd-no-results-text">इस शब्द की तुक नहीं मिली</p>
+    <p class="lang-en">No rhymes found in the corpus for this word.</p>
+    <p class="rd-no-results-hint lang-en">The corpus is drawn from the poems currently in the collection.</p>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     INJECT POEM CORPUS as JSON for client-side processing
+     ══════════════════════════════════════════════════════ -->
+<script>
+window.SANSKRIT_CORPUS = [
+  {{ range where .Site.RegularPages "Type" "poems" }}
+  {
+    title: {{ .Title | jsonify }},
+    url:   {{ .Permalink | jsonify }},
+    poet:  {{ (.Params.poet | default "") | jsonify }},
+    text:  {{ .Plain | jsonify }}
+  },
+  {{ end }}
+];
+</script>
+
+<script src="/js/rhyme-dictionary.js"></script>
+
+<!-- ══════════════════════════════════════════════════════
+     RHYME DICTIONARY STYLES
+     ══════════════════════════════════════════════════════ -->
+<style>
+/* ── PAGE LAYOUT ──────────────────────────────── */
+.rd-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+/* ── HEADER ───────────────────────────────────── */
+.rd-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.rd-header-icon {
+  font-size: 3rem;
+  color: var(--accent);
+  opacity: 0.6;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+.rd-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: var(--gold);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+.rd-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-family: var(--font-en);
+}
+
+/* ── SEARCH ZONE ──────────────────────────────── */
+.rd-search-zone {
+  margin-bottom: 1.75rem;
+}
+.rd-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.rd-input-ornament {
+  position: absolute;
+  left: 1.1rem;
+  font-size: 1.4rem;
+  color: var(--gold-dim);
+  opacity: 0.5;
+  pointer-events: none;
+  font-family: var(--font-hi);
+  line-height: 1;
+}
+.rd-input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
+  border-radius: 14px;
+  color: var(--text);
+  font-family: var(--font-hi);
+  font-size: 1.5rem;
+  padding: 0.9rem 3rem 0.9rem 3rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  letter-spacing: 0.02em;
+}
+.rd-input:focus {
+  border-color: var(--gold-dim);
+  box-shadow: 0 0 0 4px rgba(232,184,122,0.07), 0 2px 20px rgba(0,0,0,0.4);
+  background: #281208;
+}
+.rd-input::placeholder {
+  color: rgba(160,120,88,0.45);
+  font-size: 1.1rem;
+}
+.rd-clear {
+  position: absolute;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 1rem;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+.rd-clear:hover { background: var(--border); color: var(--text); }
+.rd-hint {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: var(--font-en);
+  padding-left: 0.25rem;
+}
+
+/* ── DEPTH BAR ────────────────────────────────── */
+.rd-depth-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+.rd-depth-label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-family: var(--font-en);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.rd-depth-pills {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.rd-depth-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 0.2rem 0.85rem;
+  font-size: 0.8rem;
+  font-family: var(--font-hi);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.18s;
+}
+.rd-depth-pill:hover { border-color: var(--gold-dim); color: var(--gold); }
+.rd-depth-pill.active {
+  background: #3b0a0a;
+  border-color: var(--border-light);
+  color: var(--gold);
+}
+.rd-depth-pill .pill-deva {
+  font-family: var(--font-hi);
+  font-size: 0.9rem;
+}
+.rd-depth-pill .pill-phon {
+  font-family: var(--font-en);
+  font-size: 0.68rem;
+  opacity: 0.55;
+  font-style: italic;
+  margin-left: 0.2rem;
+}
+.rd-depth-pill .pill-count {
+  font-size: 0.65rem;
+  font-family: var(--font-en);
+  background: rgba(232,184,122,0.1);
+  border-radius: 10px;
+  padding: 0.05rem 0.35rem;
+  margin-left: 0.3rem;
+  opacity: 0.8;
+}
+
+/* ── STATS ────────────────────────────────────── */
+.rd-stats {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  font-family: var(--font-en);
+  margin-bottom: 1.5rem;
+  min-height: 1.2em;
+}
+
+/* ── STATS BAR ────────────────────────────────── */
+.stats-dot { margin: 0 0.5rem; opacity: 0.35; }
+.stats-suffix { display: inline-flex; align-items: baseline; gap: 0.35rem; }
+.stats-deva { font-family: var(--font-hi); color: var(--gold-dim); font-size: 0.9rem; }
+.stats-phon { font-family: var(--font-en); font-style: italic; font-size: 0.78rem; color: var(--text-dim); }
+
+/* ── GROUP HEADING ─────────────────────────────── */
+.group-ending-deva {
+  font-family: var(--font-hi);
+  color: var(--gold-dim);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ── RESULTS GRID ─────────────────────────────── */
+.rd-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Each rhyme result card */
+.rd-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  display: flex;
+  align-items: stretch;
+}
+.rd-card:hover {
+  border-color: var(--border-light);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+  transform: translateY(-1px);
+}
+
+/* Coloured left accent bar */
+.rd-card-accent {
+  width: 4px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--accent) 0%, #3b0a0a 100%);
+  opacity: 0.6;
+}
+
+.rd-card-body {
+  padding: 1rem 1.25rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.rd-card-left { flex: 1; min-width: 0; }
+
+.rd-word {
+  font-family: var(--font-hi);
+  font-size: 1.3rem;
+  color: var(--gold);
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+/* Highlight the rhyming suffix */
+.rd-word .rhyme-suffix {
+  color: var(--accent-light);
+  font-weight: bold;
+  border-bottom: 2px solid rgba(224,85,64,0.4);
+}
+
+.rd-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+}
+.rd-source-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.73rem;
+  color: var(--text-dim);
+  font-family: var(--font-en);
+  background: rgba(232,184,122,0.04);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.1rem 0.55rem;
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+.rd-source-tag:hover { color: var(--gold-dim); border-color: var(--border-light); }
+.rd-source-tag .poet-name { opacity: 0.6; }
+
+.rd-card-right {
+  flex-shrink: 0;
+  text-align: right;
+}
+.rd-ending-badge {
+  display: inline-block;
+  font-family: var(--font-hi);
+  font-size: 0.88rem;
+  color: var(--accent-light);
+  background: rgba(192,57,43,0.1);
+  border: 1px solid rgba(192,57,43,0.2);
+  border-radius: 6px;
+  padding: 0.2rem 0.65rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── GROUP HEADINGS ───────────────────────────── */
+.rd-group {
+  margin-bottom: 0.5rem;
+}
+.rd-group-heading {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-family: var(--font-en);
+  padding: 0.4rem 0;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.rd-group-heading .group-ending {
+  font-family: var(--font-hi);
+  color: var(--gold-dim);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.rd-group-count {
+  font-size: 0.65rem;
+  background: rgba(232,184,122,0.08);
+  color: var(--gold-dim);
+  border-radius: 20px;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid rgba(232,184,122,0.15);
+}
+
+/* ── EMPTY / NO-RESULTS ───────────────────────── */
+.rd-empty-state {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  color: var(--text-light);
+}
+.rd-empty-glyph {
+  font-size: 3.5rem;
+  color: var(--gold-dim);
+  opacity: 0.2;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+.rd-empty-state p {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.7;
+}
+.rd-no-results-hint {
+  font-size: 0.82rem !important;
+  color: var(--text-dim) !important;
+  font-family: var(--font-en);
+  margin-top: 0.5rem !important;
+}
+
+/* ── EXAMPLE CHIPS ────────────────────────────── */
+.rd-example-chips {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.rd-chip-label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: var(--font-en);
+}
+.rd-example-chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  color: var(--gold-dim);
+  cursor: pointer;
+  font-family: var(--font-hi);
+  font-size: 0.95rem;
+  padding: 0.3rem 1rem;
+  transition: all 0.18s;
+}
+.rd-example-chip:hover {
+  background: #3b0a0a;
+  border-color: var(--border-light);
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.hidden { display: none !important; }
+
+/* ── LOADING INDICATOR ────────────────────────── */
+.rd-loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-dim);
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+}
+.rd-loading::after {
+  content: '…';
+  animation: ellipsis 1.2s infinite;
+}
+@keyframes ellipsis {
+  0%,100% { opacity: 0.2; }
+  50%      { opacity: 1; }
+}
+
+/* ── RESPONSIVE ───────────────────────────────── */
+@media (max-width: 580px) {
+  .rd-input { font-size: 1.1rem; }
+  .rd-word  { font-size: 1.1rem; }
+  .rd-card-body { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .rd-card-right { text-align: left; }
+}
+</style>
+
+{{ end }}

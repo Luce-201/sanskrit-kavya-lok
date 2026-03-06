@@ -1,0 +1,35 @@
+baseURL: "https://sanskrit-kavya.netlify.app/"
+languageCode: "sa"
+title: "संस्कृत काव्य कोश"
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+defaultContentLanguage: "sa"
+
+# Taxonomies
+taxonomies:
+  theme: themes
+  poet: poets_tax
+
+# Pagination
+pagination:
+  pagerSize: 20
+
+# Build settings
+enableRobotsTXT: true
+enableEmoji: true
+
+params:
+  siteName: "संस्कृत काव्य कोश"
+  siteNameEn: "Sanskrit Kavya Kosha"
+  description: "A digital anthology of Sanskrit poetry"
+  descriptionHi: "संस्कृत काव्य का डिजिटल संग्रह"
+  accentColor: "#8B1A1A"
+  bgColor: "#FDF6E3"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
