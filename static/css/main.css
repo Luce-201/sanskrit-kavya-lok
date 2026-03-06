@@ -3,23 +3,23 @@
    Dark Gold Theme
    ============================================ */
 :root {
-  --accent:        #c45c00;
-  --accent-light:  #e07020;
-  --gold:          #b36a00;
-  --gold-light:    #d48820;
-  --gold-dim:      #c07810;
+  --accent:        #c0392b;        /* deep red — primary actions */
+  --accent-light:  #e05540;        /* hover red */
+  --gold:          #e8b87a;        /* primary gold */
+  --gold-light:    #f5d9a0;        /* lighter gold for headings */
+  --gold-dim:      #c9906a;        /* muted gold */
 
-  --bg:            #fdf6e3;
-  --bg-card:       #fef9f0;
-  --bg-elevated:   #f5ead0;
-  --bg-header:     #3d1f00;
+  --bg:            #1a0e08;        /* near-black dark brown */
+  --bg-card:       #221208;        /* card background */
+  --bg-elevated:   #2c1810;        /* slightly lighter panels */
+  --bg-header:     #120804;        /* header — darkest */
 
-  --text:          #2c1a00;
-  --text-light:    #7a5c30;
-  --text-dim:      #b09060;
+  --text:          #f0e0c8;        /* warm off-white body text */
+  --text-light:    #a07858;        /* muted warm tan */
+  --text-dim:      #7a5c44;        /* very muted */
 
-  --border:        #e8d5b0;
-  --border-light:  #d4b880;
+  --border:        #3d2215;        /* dark border */
+  --border-light:  #5a3020;        /* slightly lighter border */
 
   --font-hi:       'Tiro Devanagari Sanskrit', serif;
   --font-en:       'Lora', Georgia, serif;
