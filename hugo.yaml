@@ -1,6 +1,6 @@
-baseURL: "https://sanskrit-kavya.netlify.app/"
+baseURL: "https://sanskrit-kavya-lok.netlify.app/"
 languageCode: "sa"
-title: "संस्कृत काव्य कोश"
+title: "संस्कृत काव्य लोक"
 outputs:
   home:
     - HTML
@@ -22,8 +22,8 @@ enableRobotsTXT: true
 enableEmoji: true
 
 params:
-  siteName: "संस्कृत काव्य कोश"
-  siteNameEn: "Sanskrit Kavya Kosha"
+  siteName: "संस्कृत काव्य लोक"
+  siteNameEn: "Sanskrit Kavya Lok"
   description: "A digital anthology of Sanskrit poetry"
   descriptionHi: "संस्कृत काव्य का डिजिटल संग्रह"
   accentColor: "#8B1A1A"

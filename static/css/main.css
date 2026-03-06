@@ -1,5 +1,3 @@
-================================================================
-
 /* ============================================
    SANSKRIT KAVYA KOSHA — Main Stylesheet
    Dark Gold Theme
@@ -24,7 +22,7 @@
   --border:        #3d2215;        /* dark border */
   --border-light:  #5a3020;        /* slightly lighter border */
 
-  --font-hi:       'Tiro Devanagari Hindi', serif;
+  --font-hi:       'Tiro Devanagari Sanskrit', serif;
   --font-en:       'Lora', Georgia, serif;
 }
 
