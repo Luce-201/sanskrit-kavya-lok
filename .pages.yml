@@ -1,0 +1,89 @@
+media:
+  input: "static/uploads"
+  output: "/uploads"
+
+content:
+  - name: "poems"
+    label: "कविताएँ / Poems"
+    type: "collection"
+    path: "content/poems"
+    view:
+      fields: ["title", "poet", "form"]
+    fields:
+      - { label: "शीर्षक / Title", name: "title", type: "string" }
+      - { label: "कवि / Poet", name: "poet", type: "string" }
+      - name: "form"
+        label: "रूप / Form"
+        type: "select"
+        options:
+          values:
+            - "अनुष्टुप"
+            - "इन्द्रवज्रा"
+            - "उपेन्द्रवज्रा"
+            - "वसन्ततिलका"
+            - "मालिनी"
+            - "शिखरिणी"
+            - "मन्दाक्रान्ता"
+            - "शार्दूलविक्रीडित"
+            - "स्रग्धरा"
+            - "तोटक"
+            - "द्रुतविलम्बित"
+            - "अन्य"
+      - name: "themes"
+        label: "विषय / Themes"
+        type: "list"
+        hint: "Add themes one by one (e.g. भक्ति, श्रृंगार, प्रकृति)"
+      - name: "audio_url"
+        label: "पाठ लिंक / Audio URL"
+        type: "string"
+        required: false
+      - name: "notes"
+        label: "टिप्पणी / Notes"
+        type: "rich-text"
+        required: false
+      - name: "body"
+        label: "कविता / Poem Text"
+        type: "rich-text"
+      - { label: "Draft", name: "draft", type: "boolean", default: false }
+      - { label: "Date", name: "date", type: "date" }
+
+  - name: "poets"
+    label: "कवि / Poets"
+    type: "collection"
+    path: "content/poets"
+    fields:
+      - { label: "नाम / Name", name: "title", type: "string" }
+      - { label: "काल / Dates", name: "dates", type: "string", required: false }
+      - { label: "क्षेत्र / Region", name: "region", type: "string", required: false }
+      - name: "image"
+        label: "चित्र / Photo"
+        type: "image"
+        required: false
+      - name: "body"
+        label: "जीवन परिचय / Biography"
+        type: "rich-text"
+      - { label: "Date", name: "date", type: "date" }
+
+  - name: "collections"
+    label: "संग्रह / Collections"
+    type: "collection"
+    path: "content/collections"
+    fields:
+      - { label: "शीर्षक / Title", name: "title", type: "string" }
+      - name: "image"
+        label: "संग्रह चित्र / Cover Image"
+        type: "image"
+        required: false
+      - name: "description"
+        label: "विवरण / Description"
+        type: "string"
+        required: false
+      - name: "poems"
+        label: "कविताएँ / Poems in this Collection"
+        type: "list"
+        hint: "Type each poem title exactly as it appears in PageCMS, one per line"
+      - name: "body"
+        label: "विस्तृत विवरण / Full Description"
+        type: "rich-text"
+        required: false
+      - { label: "Date", name: "date", type: "date" }
