@@ -69,11 +69,8 @@
   </div>
 </header>
 
-<div id="word-tooltip" class="word-tooltip hidden">
-  <span class="tooltip-word"></span>
-  <span class="tooltip-meaning"></span>
-  <button class="tooltip-close" onclick="closeTooltip()">✕</button>
-</div>
+<!-- Tooltip is now fully built by dictionary.js — no static inner markup needed -->
+<div id="word-tooltip" class="word-tooltip hidden"></div>
 
 <main class="main-content">
   {{ block "main" . }}{{ end }}
@@ -91,6 +88,8 @@
 </script>
 {{ end }}
 
+<!-- sanskrit-analyzer.js must load before dictionary.js -->
+<script src="/js/sanskrit-analyzer.js"></script>
 <script src="/js/dictionary.js"></script>
 <script src="/js/lang.js"></script>
 <script src="/js/fuse.min.js"></script>
