@@ -1,6 +1,7 @@
 ---
 title: Kumarsambhavam
 poet: Kalidasa
+image: /uploads/Gemini_Generated_Image_ukc5biukc5biukc5.png
 description: "**Kumārasambhava** (The Birth of Kumāra) is a foundational epic
   poem (*Mahakavya*) in classical Sanskrit literature, composed by the legendary
   4th–5th century poet **Kalidasa**. The narrative centers on a cosmic crisis
