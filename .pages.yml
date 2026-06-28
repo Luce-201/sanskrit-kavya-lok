@@ -87,3 +87,37 @@ content:
         type: "rich-text"
         required: false
       - { label: "Date", name: "date", type: "date" }
+      
+  - name: "books"
+    label: "ग्रन्थ / Books"
+    type: "collection"
+    path: "content/books"
+    fields:
+      - { label: "ग्रन्थ का नाम / Book Title", name: "title", type: "string" }
+      - { label: "कवि / Author", name: "poet", type: "string" }
+      - name: "image"
+        label: "आवरण चित्र / Cover Image"
+        type: "image"
+        required: false
+      - name: "description"
+        label: "विवरण / Description"
+        type: "rich-text"
+      - { label: "Date", name: "date", type: "date" }
+
+  - name: "chapters"
+    label: "अध्याय / Chapters"
+    type: "collection"
+    path: "content/books"
+    fields:
+      - { label: "सर्ग का नाम / Chapter Title", name: "title", type: "string" }
+      - name: "book_parent"
+        label: "ग्रन्थ / Parent Book"
+        type: "string"
+        hint: "Enter the folder name of the book this belongs to (e.g., kumarasambhavam)"
+      - { label: "सर्ग संख्या / Chapter Number", name: "weight", type: "number", hint: "Used for chronological sorting" }
+      - name: "body"
+        label: "श्लोक / Shlokas (Chronological)"
+        type: "rich-text"
+        hint: "Enter all shlokas for this chapter here in order."
+      - { label: "Date", name: "date", type: "date" }
+    
