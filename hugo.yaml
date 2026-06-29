@@ -8,6 +8,14 @@ outputs:
     - JSON
 defaultContentLanguage: "sa"
 
+# Navigation Menu
+menu:
+  main:
+    - identifier: books
+      name: ग्रन्थ
+      url: /books/
+      weight: 30
+
 # Taxonomies
 taxonomies:
   theme: themes

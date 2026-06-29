@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="container">
+  <h1>ग्रन्थ / Books</h1>
+  <div class="books-list">
+    <!-- Loop through all files in the books folder -->
+    {{ range .Pages }}
+      <!-- If it does NOT have a book_parent, it is a Book -->
+      {{ if not .Params.book_parent }}
+        <div class="book-card" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd;">
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          {{ if .Params.poet }}<p><strong>कवि:</strong> {{ .Params.poet }}</p>{{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
