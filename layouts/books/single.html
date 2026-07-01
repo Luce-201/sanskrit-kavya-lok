@@ -1,38 +1,21 @@
 {{ define "main" }}
 <div class="container">
+  <h1>{{ .Title }}</h1>
+  {{ if .Params.poet }}<p><strong>कवि:</strong> {{ .Params.poet }}</p>{{ end }}
   
-  {{ if .Params.book_parent }}
-    <!-- 🟢 THIS IS A CHAPTER VIEW -->
-    <h1>{{ .Title }}</h1>
-    <p><a href="/books/{{ .Params.book_parent | urlize }}/">← ग्रन्थ पर लौटें (Back to Book)</a></p>
-    
-    <div class="shlokas-content" style="margin-top: 30px;">
-      {{ .Content }}
-    </div>
-
-  {{ else }}
-    <!-- 🔵 THIS IS A BOOK VIEW -->
-    <h1>{{ .Title }}</h1>
-    {{ if .Params.poet }}<p><strong>कवि:</strong> {{ .Params.poet }}</p>{{ end }}
-    
-    <div class="book-description">
-      {{ .Content }}
-    </div>
-    
-    <h2 style="margin-top: 40px;">अध्याय / Chapters</h2>
-    <ul>
-      <!-- Get the filename of the current book (e.g., kumarasambhavam) -->
-      {{ $current_book := .File.ContentBaseName }}
-      
-      <!-- Loop through chapters, sorting them chronologically by 'weight' -->
-      {{ range sort (where .Site.RegularPages "Section" "books") "Params.weight" }}
-        <!-- Only show chapters that belong to this specific book -->
-        {{ if eq .Params.book_parent $current_book }}
-          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
+  <div class="book-description">
+    {{ .Content }}
+  </div>
+  
+  <h2 style="margin-top: 40px;">अध्याय / Chapters</h2>
+  <ul>
+    {{ $current_book := .File.ContentBaseName }}
+    <!-- Notice we are pulling from 'chapters' now -->
+    {{ range sort (where .Site.RegularPages "Section" "chapters") "Params.weight" }}
+      {{ if eq .Params.book_parent $current_book }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{ end }}
-    </ul>
-  {{ end }}
-
+    {{ end }}
+  </ul>
 </div>
 {{ end }}
