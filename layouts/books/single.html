@@ -1,21 +1,41 @@
 {{ define "main" }}
-<div class="container">
-  <h1>{{ .Title }}</h1>
-  {{ if .Params.poet }}<p><strong>कवि:</strong> {{ .Params.poet }}</p>{{ end }}
+<div class="container" style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
   
-  <div class="book-description">
+  <h1 style="font-family: 'Tiro Devanagari Sanskrit', serif; font-size: 2.5rem; margin-bottom: 10px;">{{ .Title }}</h1>
+  {{ if .Params.poet }}
+    <p style="font-size: 1.2rem; color: #a0a0a0; margin-bottom: 30px;"><strong>कवि:</strong> {{ .Params.poet }}</p>
+  {{ end }}
+  
+  {{ if .Content }}
+  <div class="book-description" style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1);">
     {{ .Content }}
   </div>
+  {{ end }}
   
-  <h2 style="margin-top: 40px;">अध्याय / Chapters</h2>
-  <ul>
-    {{ $current_book := .File.ContentBaseName }}
-    <!-- Notice we are pulling from 'chapters' now -->
+  <h2 style="font-family: 'Tiro Devanagari Sanskrit', serif; font-size: 1.8rem; margin-bottom: 25px;">अध्याय / Chapters</h2>
+  
+  <div class="chapters-list" style="display: flex; flex-direction: column; gap: 15px;">
+    {{ $current_book_title := lower .Title }}
+    {{ $current_book_filename := lower .File.ContentBaseName }}
+    
     {{ range sort (where .Site.RegularPages "Section" "chapters") "Params.weight" }}
-      {{ if eq .Params.book_parent $current_book }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      
+      {{ $parent := lower (default "" .Params.book_parent) }}
+      
+      {{ if or (eq $parent $current_book_title) (eq $parent $current_book_filename) }}
+        <a href="{{ .Permalink }}" style="text-decoration: none; display: block; padding: 15px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; color: #e6e6e6; transition: background 0.2s ease;">
+          <span style="font-weight: 600; font-size: 1.1rem;">{{ .Title }}</span>
+        </a>
       {{ end }}
     {{ end }}
-  </ul>
+  </div>
+
 </div>
+
+<style>
+  .chapters-list a:hover {
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.2) !important;
+  }
+</style>
 {{ end }}
