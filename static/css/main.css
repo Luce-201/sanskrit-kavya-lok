@@ -1137,4 +1137,109 @@ body {
   .rk-hero-ornament { display: none; }
   .rk-interlude { padding: 2.5rem 1.25rem; }
 }
+
+/* ============================================
+   CHAPTER TRANSLATION TOGGLE
+============================================ */
+
+/* Hide translations by default */
+.en-translation {
+    display: none;
+    font-family: var(--font-en);
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border);
+}
+
+/* Class added by JS to reveal translations */
+#chapter-content.show-translations .en-translation {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.shloka-block {
+    margin-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   TOGGLE SWITCH STYLING
+============================================ */
+.translation-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+}
+
+.toggle-label {
+    font-family: var(--font-hi);
+    font-size: 0.9rem;
+    color: var(--gold-dim);
+}
+
+/* The switch container */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--text-dim);
+    transition: .4s;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* When checked, change colors to Gold */
+input:checked + .slider {
+    background-color: rgba(240, 192, 128, 0.15); /* Faint gold bg */
+    border-color: var(--gold-dim);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+    background-color: var(--gold);
+}
 </style>

@@ -54,5 +54,25 @@ FILE: ./static/js/nav.js
     menu.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleInput = document.getElementById('trans-toggle');
+    const chapterContent = document.getElementById('chapter-content');
+
+    // Only run this script if the toggle actually exists on the page
+    if (toggleInput && chapterContent) {
+        
+        // Listen for the toggle switch changing states
+        toggleInput.addEventListener('change', function() {
+            if (this.checked) {
+                // Turn translations ON
+                chapterContent.classList.add('show-translations');
+            } else {
+                // Turn translations OFF
+                chapterContent.classList.remove('show-translations');
+            }
+        });
+    }
+});
 })();
 
