@@ -1,6 +1,6 @@
 [build]
-  command = "hugo --minify"
   publish = "public"
+  command = "pip install pandas pyyaml && python3 excel_pipeline.py && hugo --minify"
 
 [context.production.environment]
   HUGO_VERSION = "0.154.5"
