@@ -1,6 +1,3 @@
-FILE: ./static/js/nav.js
-================================================================
-
 // ============================================
 // Braj Kavya — Nav Dropdown (Tools menu)
 // ============================================
@@ -54,17 +51,27 @@ FILE: ./static/js/nav.js
     menu.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
   }
+})();
 
-  document.addEventListener('DOMContentLoaded', () => {
+
+// ============================================
+// MAHAKAVYA TRANSLATION TOGGLE LOGIC
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
     const toggleInput = document.getElementById('trans-toggle');
     const chapterContent = document.getElementById('chapter-content');
 
     // Only run this script if the toggle actually exists on the page
     if (toggleInput && chapterContent) {
         
-        // Listen for the toggle switch changing states
-        toggleInput.addEventListener('change', function() {
-            if (this.checked) {
+        // 1. Force the toggle to OFF when the page first loads
+        // (prevents caching bugs where the toggle is visually on but text is hidden)
+        toggleInput.checked = false;
+        
+        // 2. Listen for the toggle switch changing states
+        toggleInput.addEventListener('change', (e) => {
+            if (e.target.checked) {
                 // Turn translations ON
                 chapterContent.classList.add('show-translations');
             } else {
@@ -74,5 +81,3 @@ FILE: ./static/js/nav.js
         });
     }
 });
-})();
-
