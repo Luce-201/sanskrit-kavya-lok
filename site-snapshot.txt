@@ -48,6 +48,30 @@ draft: false
 
 
 ================================================================
+FILE: ./content/books/_index.md
+================================================================
+
+---
+title: "ग्रन्थाः / Books"
+layout: list
+---
+
+
+================================================================
+FILE: ./content/chapters/kumarasambhavam-sarga-1.md
+================================================================
+
+---
+title: प्रथमः सर्गः
+book_parent: kumarasambhavam
+weight: 1
+shlokas:
+- sanskrit: अस्त्युत्तरस्यां
+  translation: There is in the north
+---
+
+
+================================================================
 FILE: ./content/collections/_index.md
 ================================================================
 
@@ -239,42 +263,29 @@ FILE: ./layouts/books/list.html
 ================================================================
 
 {{ define "main" }}
-<div class="container">
-  <h1>ग्रन्थ / Books</h1>
-  <div class="books-list">
-    {{ range .Pages }}
-      <div class="book-card" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd;">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        {{ if .Params.poet }}<p><strong>कवि:</strong> {{ .Params.poet }}</p>{{ end }}
-      </div>
-    {{ end }}
-  </div>
-</div>
-{{ end }}
+<div class="collection-page">
+    <div class="collection-header">
+        <h1 class="collection-title">{{ .Title }}</h1>
+    </div>
 
-================================================================
-FILE: ./layouts/books/single.html
-================================================================
-
-{{ define "main" }}
-<div class="container">
-  <h1>{{ .Title }}</h1>
-  {{ if .Params.poet }}<p><strong>कवि:</strong> {{ .Params.poet }}</p>{{ end }}
-  
-  <div class="book-description">
-    {{ .Content }}
-  </div>
-  
-  <h2 style="margin-top: 40px;">अध्याय / Chapters</h2>
-  <ul>
-    {{ $current_book := .File.ContentBaseName }}
-    <!-- Notice we are pulling from 'chapters' now -->
-    {{ range sort (where .Site.RegularPages "Section" "chapters") "Params.weight" }}
-      {{ if eq .Params.book_parent $current_book }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    {{ end }}
-  </ul>
+    <div class="book-grid">
+        {{ if .Sections }}
+            {{ range .Sections }}
+            <a href="{{ .RelPermalink }}" class="book-card">
+                <h2 class="book-card-title">{{ .Title }}</h2>
+                <p class="book-card-meta">Enter Library &rarr;</p>
+            </a>
+            {{ end }}
+        
+        {{ else }}
+            {{ range .RegularPages.ByWeight }}
+            <a href="{{ .RelPermalink }}" class="chapter-card">
+                <h2 class="chapter-card-title">{{ .Title }}</h2>
+                <p class="chapter-card-meta">Read Sarga &rarr;</p>
+            </a>
+            {{ end }}
+        {{ end }}
+    </div>
 </div>
 {{ end }}
 
@@ -283,15 +294,31 @@ FILE: ./layouts/chapters/single.html
 ================================================================
 
 {{ define "main" }}
-<div class="container">
-  <h1>{{ .Title }}</h1>
-  <p><a href="/books/{{ .Params.book_parent | urlize }}/">← ग्रन्थ पर लौटें (Back to Book)</a></p>
-  
-  <div class="shlokas-content" style="margin-top: 30px;">
-    {{ .Content }}
-  </div>
+<div class="poem-page">
+    <div class="poem-header">
+        <h1 class="poem-title">{{ .Title }}</h1>
+        
+        <div class="translation-toggle-wrapper">
+            <label class="theme-switch" for="trans-toggle">
+                <input type="checkbox" id="trans-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">अनुवाद / Show Translation</span>
+        </div>
+    </div>
+
+    <div class="poem-body" id="chapter-content">
+        {{ range .Params.shlokas }}
+        <div class="shloka-block">
+            <p class="shloka-text">{{ .sanskrit | safeHTML }}</p>
+            
+            <p class="en-translation">{{ .translation | safeHTML }}</p>
+        </div>
+        {{ end }}
+    </div>
 </div>
 {{ end }}
+
 
 ================================================================
 FILE: ./layouts/collections/list.html
@@ -364,110 +391,6 @@ FILE: ./layouts/collections/single.html
   </section>
 </article>
 {{ end }}
-
-
-================================================================
-FILE: ./layouts/_default/baseof.html
-================================================================
-
-<!DOCTYPE html>
-<html lang="sa">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .Title }}{{ .Title }} — {{ end }}{{ .Site.Params.siteName }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
-  
-  <!-- Apply saved language BEFORE render to prevent flash -->
-  <script>
-    (function() {
-      var lang = localStorage.getItem('sanskrit_lang') || 'hi';
-      document.documentElement.setAttribute('data-lang', lang);
-    })();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/search.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">
-      <span class="logo-hi">{{ .Site.Params.siteName }}</span>
-      <span class="logo-en">{{ .Site.Params.siteNameEn }}</span>
-    </a>
-    <nav class="main-nav">
-      <a href="/poems/">
-        <span class="lang-hi">काव्यानि</span>
-        <span class="lang-en">Poems</span>
-      </a>
-      <a href="/poets/">
-        <span class="lang-hi">कवयः</span>
-        <span class="lang-en">Poets</span>
-      </a>
-      <a href="/themes/">
-        <span class="lang-hi">विषयाः</span>
-        <span class="lang-en">Themes</span>
-      </a>
-      <a href="/collections/">
-        <span class="lang-hi">संग्रहाः</span>
-        <span class="lang-en">Collections</span>
-      </a>
-      <a href="/tools/meter-analyzer/">
-        <span class="lang-hi">छन्द विश्लेषक</span>
-        <span class="lang-en">Meter Analyzer</span>
-      </a>
-      <a href="/tools/rhyme-dictionary/">
-        <span class="lang-hi">तुक शब्दकोश</span>
-        <span class="lang-en">Rhyme Dictionary</span>
-      </a>
-      <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">English</button>
-    </nav>
-    <div class="header-search" id="header-search-form">
-      <div class="header-search-wrap">
-        <svg class="header-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input
-          type="search"
-          id="header-search-input"
-          class="header-search-input"
-          placeholder="खोजें / Search…"
-          autocomplete="off"
-        >
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- Tooltip is now fully built by dictionary.js — no static inner markup needed -->
-<div id="word-tooltip" class="word-tooltip hidden"></div>
-
-<main class="main-content">
-  {{ block "main" . }}{{ end }}
-</main>
-
-<footer class="site-footer">
-  <span class="lang-hi">संस्कृत काव्य लोक</span>
-  <span class="lang-en">Sanskrit Kavya Lok</span>
-</footer>
-
-{{ $dict := index .Site.Data "dictionary" }}
-{{ if $dict }}
-<script>
-  window.SANSKRIT_DICTIONARY = {{ $dict | jsonify }};
-</script>
-{{ end }}
-
-<!-- sanskrit-analyzer.js must load before dictionary.js -->
-<script src="/js/sanskrit-analyzer.js"></script>
-<script src="/js/dictionary.js"></script>
-<script src="/js/lang.js"></script>
-<script src="/js/fuse.min.js"></script>
-<script src="/js/search.js"></script>
-</body>
-</html>
 
 
 ================================================================
@@ -1407,8 +1330,8 @@ FILE: ./netlify.toml
 ================================================================
 
 [build]
-  command = "hugo --minify"
   publish = "public"
+  command = "pip install pandas pyyaml && python3 excel_pipeline.py && hugo --minify"
 
 [context.production.environment]
   HUGO_VERSION = "0.154.5"
@@ -1541,6 +1464,195 @@ content:
         type: "rich-text"
         hint: "Enter all shlokas for this chapter here in order."
       - { label: "Date", name: "date", type: "date" }
+
+================================================================
+FILE: ./sanskrit kavya lok/layouts/_default/baseof.html
+================================================================
+
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .Title }}{{ .Title }} — {{ end }}{{ .Site.Params.siteName }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  
+  <script>
+    (function() {
+      var lang = localStorage.getItem('sanskrit_lang') || 'hi';
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-hi">{{ .Site.Params.siteName }}</span>
+      <span class="logo-en">{{ .Site.Params.siteNameEn }}</span>
+    </a>
+    <nav class="main-nav">
+      <a href="/poems/">
+        <span class="lang-hi">काव्यानि</span>
+        <span class="lang-en">Poems</span>
+      </a>
+      <a href="/poets/">
+        <span class="lang-hi">कवयः</span>
+        <span class="lang-en">Poets</span>
+      </a>
+      <a href="/themes/">
+        <span class="lang-hi">विषयाः</span>
+        <span class="lang-en">Themes</span>
+      </a>
+      <a href="/collections/">
+        <span class="lang-hi">संग्रहाः</span>
+        <span class="lang-en">Collections</span>
+      </a>
+      <a href="/books/">
+        <span class="lang-hi">ग्रन्थाः</span>
+        <span class="lang-en">Books</span>
+      </a>
+      <a href="/tools/meter-analyzer/">
+        <span class="lang-hi">छन्द विश्लेषक</span>
+        <span class="lang-en">Meter Analyzer</span>
+      </a>
+      <a href="/tools/rhyme-dictionary/">
+        <span class="lang-hi">तुक शब्दकोश</span>
+        <span class="lang-en">Rhyme Dictionary</span>
+      </a>
+      <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">English</button>
+    </nav>
+    <div class="header-search" id="header-search-form">
+      <div class="header-search-wrap">
+        <svg class="header-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          type="search"
+          id="header-search-input"
+          class="header-search-input"
+          placeholder="खोजें / Search…"
+          autocomplete="off"
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="word-tooltip" class="word-tooltip hidden"></div>
+
+<main class="main-content">
+  {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">
+  <span class="lang-hi">संस्कृत काव्य लोक</span>
+  <span class="lang-en">Sanskrit Kavya Lok</span>
+</footer>
+
+{{ $dict := index .Site.Data "dictionary" }}
+{{ if $dict }}
+<script>
+  window.SANSKRIT_DICTIONARY = {{ $dict | jsonify }};
+</script>
+{{ end }}
+
+<script src="/js/sanskrit-analyzer.js"></script>
+<script src="/js/dictionary.js"></script>
+<script src="/js/lang.js"></script>
+<script src="/js/fuse.min.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/nav.js"></script> </body>
+</html>
+
+================================================================
+FILE: ./sanskrit kavya lok/static/js/nav.js
+================================================================
+
+// ============================================
+// Braj Kavya — Nav Dropdown (Tools menu)
+// ============================================
+
+(function () {
+  const toggle = document.querySelector('.nav-dropdown-toggle');
+  const menu   = document.querySelector('.nav-dropdown-menu');
+
+  if (!toggle || !menu) return;
+
+  // Open / close on button click
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const isOpen = menu.classList.contains('is-open');
+    closeMenu();          // close any already-open state
+    if (!isOpen) openMenu();
+  });
+
+  // Close when clicking anywhere outside
+  document.addEventListener('click', function () {
+    closeMenu();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // Keyboard: allow arrow-key navigation inside the menu
+  menu.addEventListener('keydown', function (e) {
+    const items = Array.from(menu.querySelectorAll('a'));
+    const idx   = items.indexOf(document.activeElement);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      items[(idx + 1) % items.length].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      items[(idx - 1 + items.length) % items.length].focus();
+    }
+  });
+
+  function openMenu() {
+    menu.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    // Move focus to first item for keyboard users
+    const first = menu.querySelector('a');
+    if (first) first.focus();
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+})();
+
+
+// ============================================
+// MAHAKAVYA TRANSLATION TOGGLE LOGIC
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleInput = document.getElementById('trans-toggle');
+    const chapterContent = document.getElementById('chapter-content');
+
+    // Only run this script if the toggle actually exists on the page
+    if (toggleInput && chapterContent) {
+        
+        // Force the toggle to OFF when the page first loads
+        toggleInput.checked = false;
+        
+        // Listen for the toggle switch changing states
+        toggleInput.addEventListener('change', function() {
+            if (this.checked) {
+                chapterContent.classList.add('show-translations');
+            } else {
+                chapterContent.classList.remove('show-translations');
+            }
+        });
+    }
+});
 
 ================================================================
 FILE: ./static/css/main.css
@@ -2685,6 +2797,154 @@ body {
   .rk-hero-ornament { display: none; }
   .rk-interlude { padding: 2.5rem 1.25rem; }
 }
+
+/* ============================================
+   CHAPTER TRANSLATION TOGGLE
+============================================ */
+
+/* Hide translations by default */
+.en-translation {
+    display: none;
+    font-family: var(--font-en);
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border);
+}
+
+/* Class added by JS to reveal translations */
+#chapter-content.show-translations .en-translation {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.shloka-block {
+    margin-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   TOGGLE SWITCH STYLING
+============================================ */
+.translation-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+}
+
+.toggle-label {
+    font-family: var(--font-hi);
+    font-size: 0.9rem;
+    color: var(--gold-dim);
+}
+
+/* The switch container */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--text-dim);
+    transition: .4s;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* When checked, change colors to Gold */
+input:checked + .slider {
+    background-color: rgba(240, 192, 128, 0.15); /* Faint gold bg */
+    border-color: var(--gold-dim);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+    background-color: var(--gold);
+}
+
+/* ============================================
+   BOOK & CHAPTER GRIDS
+============================================ */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.book-card, .chapter-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-card:hover, .chapter-card:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book-card-title, .chapter-card-title {
+    color: var(--gold);
+    font-family: var(--font-hi);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.book-card-meta, .chapter-card-meta {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-family: var(--font-en);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 </style>
 
 
@@ -3140,70 +3400,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.setAttribute('data-lang', lang);
   updateToggleButton(lang);
 });
-
-
-================================================================
-FILE: ./static/js/nav.js
-================================================================
-
-FILE: ./static/js/nav.js
-================================================================
-
-// ============================================
-// Braj Kavya — Nav Dropdown (Tools menu)
-// ============================================
-
-(function () {
-  const toggle = document.querySelector('.nav-dropdown-toggle');
-  const menu   = document.querySelector('.nav-dropdown-menu');
-
-  if (!toggle || !menu) return;
-
-  // Open / close on button click
-  toggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    const isOpen = menu.classList.contains('is-open');
-    closeMenu();          // close any already-open state
-    if (!isOpen) openMenu();
-  });
-
-  // Close when clicking anywhere outside
-  document.addEventListener('click', function () {
-    closeMenu();
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
-  });
-
-  // Keyboard: allow arrow-key navigation inside the menu
-  menu.addEventListener('keydown', function (e) {
-    const items = Array.from(menu.querySelectorAll('a'));
-    const idx   = items.indexOf(document.activeElement);
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      items[(idx + 1) % items.length].focus();
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      items[(idx - 1 + items.length) % items.length].focus();
-    }
-  });
-
-  function openMenu() {
-    menu.classList.add('is-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    // Move focus to first item for keyboard users
-    const first = menu.querySelector('a');
-    if (first) first.focus();
-  }
-
-  function closeMenu() {
-    menu.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }
-})();
-
 
 
 ================================================================
