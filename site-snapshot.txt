@@ -394,6 +394,110 @@ FILE: ./layouts/collections/single.html
 
 
 ================================================================
+FILE: ./layouts/_default/baseof.html
+================================================================
+
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .Title }}{{ .Title }} — {{ end }}{{ .Site.Params.siteName }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  
+  <script>
+    (function() {
+      var lang = localStorage.getItem('sanskrit_lang') || 'hi';
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-hi">{{ .Site.Params.siteName }}</span>
+      <span class="logo-en">{{ .Site.Params.siteNameEn }}</span>
+    </a>
+    <nav class="main-nav">
+      <a href="/poems/">
+        <span class="lang-hi">काव्यानि</span>
+        <span class="lang-en">Poems</span>
+      </a>
+      <a href="/poets/">
+        <span class="lang-hi">कवयः</span>
+        <span class="lang-en">Poets</span>
+      </a>
+      <a href="/themes/">
+        <span class="lang-hi">विषयाः</span>
+        <span class="lang-en">Themes</span>
+      </a>
+      <a href="/collections/">
+        <span class="lang-hi">संग्रहाः</span>
+        <span class="lang-en">Collections</span>
+      </a>
+      <a href="/books/">
+        <span class="lang-hi">ग्रन्थाः</span>
+        <span class="lang-en">Books</span>
+      </a>
+      <a href="/tools/meter-analyzer/">
+        <span class="lang-hi">छन्द विश्लेषक</span>
+        <span class="lang-en">Meter Analyzer</span>
+      </a>
+      <a href="/tools/rhyme-dictionary/">
+        <span class="lang-hi">तुक शब्दकोश</span>
+        <span class="lang-en">Rhyme Dictionary</span>
+      </a>
+      <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">English</button>
+    </nav>
+    <div class="header-search" id="header-search-form">
+      <div class="header-search-wrap">
+        <svg class="header-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          type="search"
+          id="header-search-input"
+          class="header-search-input"
+          placeholder="खोजें / Search…"
+          autocomplete="off"
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="word-tooltip" class="word-tooltip hidden"></div>
+
+<main class="main-content">
+  {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">
+  <span class="lang-hi">संस्कृत काव्य लोक</span>
+  <span class="lang-en">Sanskrit Kavya Lok</span>
+</footer>
+
+{{ $dict := index .Site.Data "dictionary" }}
+{{ if $dict }}
+<script>
+  window.SANSKRIT_DICTIONARY = {{ $dict | jsonify }};
+</script>
+{{ end }}
+
+<script src="/js/sanskrit-analyzer.js"></script>
+<script src="/js/dictionary.js"></script>
+<script src="/js/lang.js"></script>
+<script src="/js/fuse.min.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/nav.js"></script> </body>
+</html>
+
+================================================================
 FILE: ./layouts/_default/list.html
 ================================================================
 
@@ -1464,195 +1568,6 @@ content:
         type: "rich-text"
         hint: "Enter all shlokas for this chapter here in order."
       - { label: "Date", name: "date", type: "date" }
-
-================================================================
-FILE: ./sanskrit kavya lok/layouts/_default/baseof.html
-================================================================
-
-<!DOCTYPE html>
-<html lang="sa">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .Title }}{{ .Title }} — {{ end }}{{ .Site.Params.siteName }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
-  
-  <script>
-    (function() {
-      var lang = localStorage.getItem('sanskrit_lang') || 'hi';
-      document.documentElement.setAttribute('data-lang', lang);
-    })();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/search.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">
-      <span class="logo-hi">{{ .Site.Params.siteName }}</span>
-      <span class="logo-en">{{ .Site.Params.siteNameEn }}</span>
-    </a>
-    <nav class="main-nav">
-      <a href="/poems/">
-        <span class="lang-hi">काव्यानि</span>
-        <span class="lang-en">Poems</span>
-      </a>
-      <a href="/poets/">
-        <span class="lang-hi">कवयः</span>
-        <span class="lang-en">Poets</span>
-      </a>
-      <a href="/themes/">
-        <span class="lang-hi">विषयाः</span>
-        <span class="lang-en">Themes</span>
-      </a>
-      <a href="/collections/">
-        <span class="lang-hi">संग्रहाः</span>
-        <span class="lang-en">Collections</span>
-      </a>
-      <a href="/books/">
-        <span class="lang-hi">ग्रन्थाः</span>
-        <span class="lang-en">Books</span>
-      </a>
-      <a href="/tools/meter-analyzer/">
-        <span class="lang-hi">छन्द विश्लेषक</span>
-        <span class="lang-en">Meter Analyzer</span>
-      </a>
-      <a href="/tools/rhyme-dictionary/">
-        <span class="lang-hi">तुक शब्दकोश</span>
-        <span class="lang-en">Rhyme Dictionary</span>
-      </a>
-      <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">English</button>
-    </nav>
-    <div class="header-search" id="header-search-form">
-      <div class="header-search-wrap">
-        <svg class="header-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input
-          type="search"
-          id="header-search-input"
-          class="header-search-input"
-          placeholder="खोजें / Search…"
-          autocomplete="off"
-        >
-      </div>
-    </div>
-  </div>
-</header>
-
-<div id="word-tooltip" class="word-tooltip hidden"></div>
-
-<main class="main-content">
-  {{ block "main" . }}{{ end }}
-</main>
-
-<footer class="site-footer">
-  <span class="lang-hi">संस्कृत काव्य लोक</span>
-  <span class="lang-en">Sanskrit Kavya Lok</span>
-</footer>
-
-{{ $dict := index .Site.Data "dictionary" }}
-{{ if $dict }}
-<script>
-  window.SANSKRIT_DICTIONARY = {{ $dict | jsonify }};
-</script>
-{{ end }}
-
-<script src="/js/sanskrit-analyzer.js"></script>
-<script src="/js/dictionary.js"></script>
-<script src="/js/lang.js"></script>
-<script src="/js/fuse.min.js"></script>
-<script src="/js/search.js"></script>
-<script src="/js/nav.js"></script> </body>
-</html>
-
-================================================================
-FILE: ./sanskrit kavya lok/static/js/nav.js
-================================================================
-
-// ============================================
-// Braj Kavya — Nav Dropdown (Tools menu)
-// ============================================
-
-(function () {
-  const toggle = document.querySelector('.nav-dropdown-toggle');
-  const menu   = document.querySelector('.nav-dropdown-menu');
-
-  if (!toggle || !menu) return;
-
-  // Open / close on button click
-  toggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    const isOpen = menu.classList.contains('is-open');
-    closeMenu();          // close any already-open state
-    if (!isOpen) openMenu();
-  });
-
-  // Close when clicking anywhere outside
-  document.addEventListener('click', function () {
-    closeMenu();
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
-  });
-
-  // Keyboard: allow arrow-key navigation inside the menu
-  menu.addEventListener('keydown', function (e) {
-    const items = Array.from(menu.querySelectorAll('a'));
-    const idx   = items.indexOf(document.activeElement);
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      items[(idx + 1) % items.length].focus();
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      items[(idx - 1 + items.length) % items.length].focus();
-    }
-  });
-
-  function openMenu() {
-    menu.classList.add('is-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    // Move focus to first item for keyboard users
-    const first = menu.querySelector('a');
-    if (first) first.focus();
-  }
-
-  function closeMenu() {
-    menu.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }
-})();
-
-
-// ============================================
-// MAHAKAVYA TRANSLATION TOGGLE LOGIC
-// ============================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleInput = document.getElementById('trans-toggle');
-    const chapterContent = document.getElementById('chapter-content');
-
-    // Only run this script if the toggle actually exists on the page
-    if (toggleInput && chapterContent) {
-        
-        // Force the toggle to OFF when the page first loads
-        toggleInput.checked = false;
-        
-        // Listen for the toggle switch changing states
-        toggleInput.addEventListener('change', function() {
-            if (this.checked) {
-                chapterContent.classList.add('show-translations');
-            } else {
-                chapterContent.classList.remove('show-translations');
-            }
-        });
-    }
-});
 
 ================================================================
 FILE: ./static/css/main.css
@@ -2952,8 +2867,6 @@ input:checked + .slider:before {
 FILE: ./static/css/nav-dropdown.css
 ================================================================
 
-FILE: ./static/css/nav-dropdown.css
-================================================================
 
 /* ============================================
    TOOLS DROPDOWN NAV — append to main.css
@@ -3157,8 +3070,6 @@ FILE: ./static/css/nav-dropdown.css
 FILE: ./static/css/search.css
 ================================================================
 
-FILE: ./static/css/search.css
-================================================================
 
 /* ============================================
    SEARCH FEATURE — Dark Gold Theme
@@ -3401,6 +3312,91 @@ document.addEventListener('DOMContentLoaded', () => {
   updateToggleButton(lang);
 });
 
+
+================================================================
+FILE: ./static/js/nav.js
+================================================================
+
+// ============================================
+// Braj Kavya — Nav Dropdown (Tools menu)
+// ============================================
+
+(function () {
+  const toggle = document.querySelector('.nav-dropdown-toggle');
+  const menu   = document.querySelector('.nav-dropdown-menu');
+
+  if (!toggle || !menu) return;
+
+  // Open / close on button click
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const isOpen = menu.classList.contains('is-open');
+    closeMenu();          // close any already-open state
+    if (!isOpen) openMenu();
+  });
+
+  // Close when clicking anywhere outside
+  document.addEventListener('click', function () {
+    closeMenu();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // Keyboard: allow arrow-key navigation inside the menu
+  menu.addEventListener('keydown', function (e) {
+    const items = Array.from(menu.querySelectorAll('a'));
+    const idx   = items.indexOf(document.activeElement);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      items[(idx + 1) % items.length].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      items[(idx - 1 + items.length) % items.length].focus();
+    }
+  });
+
+  function openMenu() {
+    menu.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    // Move focus to first item for keyboard users
+    const first = menu.querySelector('a');
+    if (first) first.focus();
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+})();
+
+
+// ============================================
+// MAHAKAVYA TRANSLATION TOGGLE LOGIC
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleInput = document.getElementById('trans-toggle');
+    const chapterContent = document.getElementById('chapter-content');
+
+    // Only run this script if the toggle actually exists on the page
+    if (toggleInput && chapterContent) {
+        
+        // Force the toggle to OFF when the page first loads
+        toggleInput.checked = false;
+        
+        // Listen for the toggle switch changing states
+        toggleInput.addEventListener('change', function() {
+            if (this.checked) {
+                chapterContent.classList.add('show-translations');
+            } else {
+                chapterContent.classList.remove('show-translations');
+            }
+        });
+    }
+});
 
 ================================================================
 FILE: ./static/js/sanskrit-analyzer.js
@@ -3735,157 +3731,6 @@ FILE: ./static/js/sanskrit-analyzer.js
   else injectCSS();
 
 })(window);
-
-
-================================================================
-FILE: ./static/js/search.js
-================================================================
-
-      >
-        <span class="pill-deva">${escapeHtml(devaSuffix)}</span>
-        <span class="pill-phon">-${escapeHtml(phoneticSuffix)}</span>
-        <span class="pill-count">${count}</span>
-      </button>
-    `).join('');
-
-    depthPills.querySelectorAll('.rd-depth-pill').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentDepth = parseInt(btn.dataset.depth, 10);
-        renderResults(currentQuery);
-        depthPills.querySelectorAll('.rd-depth-pill').forEach(b =>
-          b.classList.toggle('active', parseInt(b.dataset.depth, 10) === currentDepth)
-        );
-      });
-    });
-
-    depthBar.style.display = availableDepths.length > 0 ? 'flex' : 'none';
-  }
-
-  function renderResults(queryWord) {
-    if (!queryWord) { showEmpty(); return; }
-
-    const results  = findRhymes(queryWord, currentDepth);
-    const qp       = getPhonetics(queryWord);
-    const suffix   = getPhoneticSuffix(qp.tokens, currentDepth);
-    const devaSuf  = getDevaSuffix(queryWord, currentDepth);
-
-    if (results.length === 0) {
-      resultsEl.innerHTML = '';
-      statsEl.innerHTML   = '';
-      noResultsTxt.textContent = `"${queryWord}" की तुक नहीं मिली`;
-      noResultsEl.classList.remove('hidden');
-      emptyEl.classList.add('hidden');
-      return;
-    }
-
-    noResultsEl.classList.add('hidden');
-    emptyEl.classList.add('hidden');
-
-    statsEl.innerHTML = `
-      <span>${results.length} तुक / ${results.length} rhyme${results.length !== 1 ? 's' : ''}</span>
-      <span class="stats-dot">·</span>
-      <span class="stats-suffix">
-        <span class="stats-deva" title="Devanagari ending">${escapeHtml(devaSuf)}</span>
-        <span class="stats-phon" title="How it sounds">-${escapeHtml(suffix)}</span>
-      </span>
-    `;
-
-    // Group by Devanagari spelling of the ending
-    // (Homophones like ण and न will now appear in the same group
-    //  because they match phonetically — but may be in separate sub-groups
-    //  by spelling, which lets poets see both spellings clearly)
-    const groups = new Map();
-    for (const r of results) {
-      const key = getDevaSuffix(r.word, currentDepth);
-      if (!groups.has(key)) groups.set(key, []);
-      groups.get(key).push(r);
-    }
-
-    let html = '';
-    for (const [groupDeva, words] of groups.entries()) {
-      html += `
-        <div class="rd-group">
-          <div class="rd-group-heading">
-            <span class="group-ending-deva">${escapeHtml(groupDeva)}</span>
-            <span class="rd-group-count">${words.length}</span>
-          </div>
-          ${words.map(({ word, refs }) => `
-            <div class="rd-card">
-              <div class="rd-card-accent"></div>
-              <div class="rd-card-body">
-                <div class="rd-card-left">
-                  <div class="rd-word">${renderWord(word, currentDepth)}</div>
-                  <div class="rd-sources">
-                    ${refs.map(ref => `
-                      <a href="${ref.url}" class="rd-source-tag" title="${escapeHtml(ref.title)}">
-                        ${escapeHtml(truncate(ref.title, 22))}
-                        ${ref.poet ? `<span class="poet-name">— ${escapeHtml(ref.poet)}</span>` : ''}
-                      </a>
-                    `).join('')}
-                  </div>
-                </div>
-                <div class="rd-card-right">
-                  <span class="rd-ending-badge">${escapeHtml(getDevaSuffix(word, currentDepth))}</span>
-                </div>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      `;
-    }
-
-    resultsEl.innerHTML = html;
-  }
-
-  function showEmpty() {
-    resultsEl.innerHTML = '';
-    statsEl.innerHTML   = '';
-    emptyEl.classList.remove('hidden');
-    noResultsEl.classList.add('hidden');
-    depthBar.style.display = 'none';
-  }
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // SECTION 6 — EVENTS & INIT
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  let debounceTimer = null;
-
-  function runSearch(raw) {
-    const query = cleanWord(raw.trim());
-    currentQuery = query;
-    clearBtn.style.display = raw.length > 0 ? 'flex' : 'none';
-    if (!query || !/[\u0900-\u097F]/.test(query)) { showEmpty(); return; }
-    currentDepth = autoDetectDepth(query);
-    renderDepthPills(query);
-    renderResults(query);
-  }
-
-  inputEl.addEventListener('input', function () {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => runSearch(this.value), 120);
-  });
-
-  clearBtn.addEventListener('click', function () {
-    inputEl.value = '';
-    inputEl.focus();
-    showEmpty();
-    this.style.display = 'none';
-  });
-
-  document.querySelectorAll('.rd-example-chip').forEach(chip => {
-    chip.addEventListener('click', function () {
-      inputEl.value = this.dataset.word;
-      inputEl.focus();
-      runSearch(this.dataset.word);
-    });
-  });
-
-  // Support ?q= URL parameter
-  const qParam = new URLSearchParams(window.location.search).get('q');
-  if (qParam) { inputEl.value = qParam; runSearch(qParam); }
-
-})();
 
 
 ================================================================

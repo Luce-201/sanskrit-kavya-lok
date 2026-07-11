@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="poem-page">
+    <div class="poem-header">
+        <h1 class="poem-title">{{ .Title }}</h1>
+        
+        <div class="translation-toggle-wrapper">
+            <label class="theme-switch" for="trans-toggle">
+                <input type="checkbox" id="trans-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">अनुवाद / Show Translation</span>
+        </div>
+    </div>
+
+    <div class="poem-body" id="chapter-content">
+        {{ range .Params.shlokas }}
+        <div class="shloka-block">
+            <p class="shloka-text">{{ .sanskrit | safeHTML }}</p>
+            
+            <p class="en-translation">{{ .translation | safeHTML }}</p>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
