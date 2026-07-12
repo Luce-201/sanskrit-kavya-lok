@@ -15,10 +15,13 @@
       {{ with .Params.region }}<p class="region">{{ . }}</p>{{ end }}
     </div>
   </header>
+
   <div class="poet-bio">
     {{ .Content }}
   </div>
+
   {{ $poet := .Title }}
+
   {{ $poems := where .Site.RegularPages "Params.poet" $poet }}
   {{ if $poems }}
   <section class="poet-poems">
@@ -26,9 +29,41 @@
       <span class="lang-hi">रचनाएँ</span>
       <span class="lang-en">Works</span>
     </h2>
-    <div class="poem-grid">
+    <div class="rk-poem-list">
       {{ range $poems }}
-      {{ partial "poem-card.html" . }}
+      <a href="{{ .RelPermalink }}" class="rk-poem-row">
+        <div class="rk-poem-row-text">
+          <h3 class="rk-poem-row-title">{{ .Title }}</h3>
+        </div>
+        <div class="rk-poem-row-right">
+          {{ with .Params.form }}
+          <span class="rk-form-badge">{{ . }}</span>
+          {{ end }}
+          {{ if .Params.audio_url }}
+          <span class="rk-audio-dot" title="Audio available">🎵</span>
+          {{ end }}
+          <svg class="rk-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ $books := where (where .Site.Pages "Kind" "section") "Type" "books" }}
+  {{ $books = where $books "Params.poet" $poet }}
+  {{ if $books }}
+  <section class="poet-books">
+    <h2>
+      <span class="lang-hi">ग्रन्थाः</span>
+      <span class="lang-en">Books</span>
+    </h2>
+    <div class="book-grid">
+      {{ range $books }}
+      <a href="{{ .RelPermalink }}" class="book-card">
+        <h2 class="book-card-title">{{ .Title }}</h2>
+        <p class="book-card-meta">Enter Library &rarr;</p>
+      </a>
       {{ end }}
     </div>
   </section>
