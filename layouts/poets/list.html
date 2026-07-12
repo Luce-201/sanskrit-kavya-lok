@@ -4,9 +4,27 @@
     <h1>कवयः <span class="en">Poets</span></h1>
     <p>{{ len .Pages }} कवयः / poets</p>
   </header>
-  <div class="poet-grid">
+  <div class="content-list">
     {{ range .Pages }}
-    {{ partial "poet-card.html" . }}
+    <a href="{{ .RelPermalink }}" class="content-list-row">
+      <div class="content-list-left">
+        {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="content-list-avatar">
+        {{ else }}
+        <div class="content-list-avatar content-list-avatar-fallback">{{ substr .Title 0 1 }}</div>
+        {{ end }}
+        <div class="content-list-text">
+          <span class="content-list-title">
+            <span class="lang-hi">{{ .Title }}</span>
+            <span class="lang-en">{{ .Params.title_en | default .Title }}</span>
+          </span>
+          {{ with .Params.dates }}<span class="content-list-sub">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      <svg class="content-list-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
     {{ end }}
   </div>
 </div>
