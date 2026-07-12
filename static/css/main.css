@@ -1265,6 +1265,54 @@ input:checked + .slider:before {
     justify-content: space-between;
 }
 
+/* ============================================
+   BOOK & CHAPTER LIST (row style)
+============================================ */
+.book-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.book-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s, padding-left 0.2s;
+}
+
+.book-list-row:last-child { border-bottom: none; }
+
+.book-list-row:hover {
+    background: #1e0a38;
+    padding-left: 1.85rem;
+}
+
+.book-list-title {
+    font-family: var(--font-hi);
+    font-size: 1.1rem;
+    color: var(--gold);
+}
+
+.book-list-arrow {
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.book-list-row:hover .book-list-arrow {
+    color: var(--gold);
+    transform: translate(2px, -2px);
+}
+
 .book-card:hover, .chapter-card:hover {
     border-color: var(--gold-dim);
     transform: translateY(-3px);

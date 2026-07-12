@@ -4,20 +4,23 @@
         <h1 class="collection-title">{{ .Title }}</h1>
     </div>
 
-    <div class="book-grid">
+    <div class="book-list">
         {{ if .Sections }}
             {{ range .Sections }}
-            <a href="{{ .RelPermalink }}" class="book-card">
-                <h2 class="book-card-title">{{ .Title }}</h2>
-                <p class="book-card-meta">Enter Library &rarr;</p>
+            <a href="{{ .RelPermalink }}" class="book-list-row">
+                <span class="book-list-title">{{ .Title }}</span>
+                <svg class="book-list-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
             </a>
             {{ end }}
-        
         {{ else }}
             {{ range .RegularPages.ByWeight }}
-            <a href="{{ .RelPermalink }}" class="chapter-card">
-                <h2 class="chapter-card-title">{{ .Title }}</h2>
-                <p class="chapter-card-meta">Read Sarga &rarr;</p>
+            <a href="{{ .RelPermalink }}" class="book-list-row">
+                <span class="book-list-title">{{ .Title }}</span>
+                <svg class="book-list-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
             </a>
             {{ end }}
         {{ end }}
