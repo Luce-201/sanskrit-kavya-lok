@@ -1,5 +1,5 @@
 <div class="collection-card">
-  <a href="{{ .Permalink }}" class="collection-card-link">
+  <a href="{{ .RelPermalink }}" class="collection-card-link"></a>
     <div class="collection-card-image">
       {{ with .Params.image }}
       <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">

@@ -3,10 +3,17 @@
   <header class="poem-header">
     <h1 class="poem-title">{{ .Title }}</h1>
     {{ with .Params.poet }}
-    <p class="poem-poet">
-      <a href="/poets/{{ . | urlize }}/">{{ . }}</a>
-    </p>
-    {{ end }}
+{{ $poetName := . }}
+{{ $poetPages := where $.Site.RegularPages "Type" "poets" }}
+{{ $poetPages = where $poetPages "Title" $poetName }}
+<p class="poem-poet">
+  {{ with index $poetPages 0 }}
+  <a href="{{ .RelPermalink }}">{{ $poetName }}</a>
+  {{ else }}
+  {{ $poetName }}
+  {{ end }}
+</p>
+{{ end }}
     {{ if .Params.themes }}
       {{ $themes := .Params.themes }}
       {{ if not (reflect.IsSlice $themes) }}

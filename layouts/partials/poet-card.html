@@ -1,5 +1,5 @@
 <div class="poet-card">
-  <a href="{{ .Permalink }}">
+  <a href="{{ .RelPermalink }}"></a>
     {{ with .Params.image }}
     <img src="{{ . }}" alt="{{ $.Title }}" class="poet-thumb" loading="lazy">
     {{ else }}
