@@ -21,7 +21,7 @@ shlokas:
 - sanskrit: 'अनन्तरत्नप्रभवस्य यस्य हिमं न सौभाग्यविलोपि जातम्।
 
     एको हि दोषो गुणसन्निपाते निमज्जतीन्दोः किरणेष्विवाङ्कः ॥ 1.3'
-  translation: 'whose snow has not been fortunately removed from the source of the
+  translation: 'whose snow has not been fortunately erased from the source of the
     next gem.
 
     There is only one fault in the confluence of the modes of nature, just as a lap
@@ -29,7 +29,7 @@ shlokas:
 - sanskrit: 'यश्चाप्सरोविभ्रममण्डनानां सम्पादयित्रीं शीखरैबिभर्ति ।
 
     लाहकच्छेदविभक्तरागामकालसन्ध्यामिव धातुमत्ताम्॥ 1.4'
-  translation: 'He who carries on his peak the accomplishment of the illusory ornaments
+  translation: 'He also carries on his peak the accomplishment of the illusory ornaments
     of the nymphs.
 
     She was intoxicated with metals like the twilight of time split by the cut of
@@ -37,17 +37,17 @@ shlokas:
 - sanskrit: 'आमेखलं सञ्चरतां घनानां छायामधः सानुगतां निषेव्य ।
 
     उद्वेजिता वृष्टिभिराश्रयन्ते श‍ृङ्गाणि यस्यातपवन्ति सिद्धाः ॥ 1.5'
-  translation: 'Serving the belt under the shadow of the moving clouds that followed.
+  translation: 'Serving the shadows of the moving clouds that followed the belt.
 
-    Disturbed by the rains, the perfected sages take shelter of the mountains on its
-    peaks. 1.5'
+    Disturbed by heavy rains, the perfected souls take refuge on the peaks of that
+    mountain. 1.5'
 - sanskrit: 'पदं तुषारस्त्रुतिधैतरक्तं यस्मिन्नदृष्ट्वापि हतद्विपानाम्।
 
     विदन्ति मार्गं नखरन्ध्रमुक्तैर्मुक्ताफलैः केसरिणां किराताः ॥ 1.6'
   translation: 'The footsteps of the elephants killed by the snow are red with snow
 
-    The Kirātas know the path of the lilies by their pearl fruits released from the
-    holes of their nails 1.6'
+    The Kirātas know the path of the lotus flowers by their pearl fruits released
+    from the holes of their nails 1.6'
 - sanskrit: 'न्यस्ताक्षरा धातुरसेन यत्र भूर्जत्वचः कुञ्जरबिन्दुशोणाः ।
 
     व्रजन्ति विद्याधरसुन्दरीणामूनङ्गलेखक्रिययोपयोगम्॥ 1.7'
@@ -104,7 +104,7 @@ shlokas:
 - sanskrit: 'यत्रांशुकाक्षेपविलज्जितानां यदृच्छया किम्पुरुषाङ्गनानाम्।
 
     दरीगृहद्वार विलम्बिम्बीम्बास्तिरस्करिण्यो जलदा भवन्ति ॥ 1.14'
-  translation: 'Where the women of Kimpurusha were shy of throwing their robes at
+  translation: 'Where the ladies of Kimpurusha were shy of throwing their robes at
     random
 
     The doors of caves and houses are like clouds, and the doors of the houses are
@@ -112,8 +112,8 @@ shlokas:
 - sanskrit: 'भागीरथीनिर्झरसिकराणां वोढा मुहमः कम्पितदेवदारुः ।
 
     यद्वायुरन्विष्टमृगैः किरातैरासेव्यते भिन्नशिशण्डिबर्हः ॥ 1.15'
-  translation: 'The cedar tree trembling carried by the waterfalls of the Bhagirathi
-    river
+  translation: 'The Muhama, carried by the waterfalls of the Bhagirathi, is a trembling
+    cedar tree.
 
     The wind that blows in the air is breathed by the deer and the insects. 1.15'
 - sanskrit: 'सप्तर्षिहस्तावचिता वशेषाण्यधो विवस्वानपरिवर्तमानः ।
@@ -129,7 +129,7 @@ shlokas:
   translation: 'Considering that the sacrificial organs are the source of the universe,
     the essence of the universe is that it is capable of sustaining the earth.
 
-    Prajapati himself assumed the kingdom of the mountains as part of the sacrifice
+    Prajapati himself took up the kingdom of the mountains as part of the sacrifice
     arranged for him 1.17'
 - sanskrit: 'स मानसीं मेरु-सखः पितॄणां कन्यां कुलस्य स्थितये स्थितिज्ञः ।
 
@@ -137,8 +137,8 @@ shlokas:
   translation: 'He was a friend of Meru, the daughter of his ancestors, and he knew
     the position of the family.
 
-    He married Me, who was respected even by the greatest sages, according to the
-    prescribed rituals. 1.18'
+    He married Me, who was respected even by the sages, and who was very suitable
+    for him. 1.18'
 - sanskrit: 'स मानसिं मेरुसखः पितॄणां कन्यां कुलस्य स्थितये स्थितिज्ञः ।
 
     मेनां मुनीनामपि माननीयामात्मानुरुपां विधिनोपयेमे ॥ 1.18'
@@ -160,7 +160,7 @@ shlokas:
   translation: 'She gave birth to Mainaka who was enjoyed by the serpent bride and
     who was bound to the treasure of water
 
-    When Vritrasatra cut off his wings even in anger he was ignorant of the pain of
+    Even when Vritrasatra cut off his wings in anger he was ignorant of the pain of
     those who knew his family 1.20'
 - sanskrit: 'अथावमानेन पितुः प्रयुक्ता दक्षस्य कन्या भवपूर्वपत्नी ।
 
@@ -176,8 +176,8 @@ shlokas:
   translation: 'That beautiful woman, who was in trance, was blessed by the lord of
     the earth.
 
-    By the virtue of enthusiasm wealth seemed to have been brought to a woman who
-    had not been examined by proper use. 1.22'
+    By the virtue of enthusiasm wealth seemed to have been brought to an untested
+    place by proper use. 1.22'
 - sanskrit: 'प्रसन्नदिक्पांसुविविक्तवातं शङ्खस्वनानन्तरपुष्पवृष्टि ।
 
     शरीरिणां स्थावरजङ्गमानां सुखाय तज्जन्मदिनं बभुव ॥ 1.23'
@@ -191,14 +191,15 @@ shlokas:
     विदूरभूमिर्नवमेघशब्दा दुद्भिन्नया रत्नशलाकयैव ॥ 1.24'
   translation: 'The daughter of the sun shone brightly with her sparkling radiance.
 
-    The sound of nine clouds in the distance resembled a jewel-shaped pendant. 1.24'
+    The sound of nine clouds in the distant land was like a jewel-like bar split open.
+    1.24'
 - sanskrit: 'दिने दिने सा परिवर्धमाना लब्धोदया चान्द्रमसीव लेख ।
 
     पुपोष लावण्यमयान्विशेषाञ्जयोत्स्नान्तराणीव कलान्तराणि ॥ 1.25'
   translation: 'Day by day she grew and became as bright as the moon.
 
-    She maintained all kinds of beauty, just as the flowers of the universe pass through
-    the age of conquest. 1.25'
+    She maintained her beauty, which was as beautiful as the flowers of the universe.
+    1.25'
 - sanskrit: 'तां पार्वतीत्याभिजनेन नाम्ना बन्धुप्रियां बन्धजनो जहाव ।
 
     उमेति मात्रा तपसो निषिद्धा पश्चादुमाख्यां सुमुखो जगाम ॥ 1.26'
@@ -226,7 +227,7 @@ shlokas:
 
     रेमे मुहिर्मध्यगता सखीनां क्रीडारसं निर्विशतीव बाल्ये ॥ 1.29'
   translation: 'She was surrounded by altars surrounded by the river Mandakini and
-    by balls and artificial children
+    balls and artificial children
 
     She enjoyed herself in the midst of her friends, as if she were entering the pastimes
     of her childhood. 1.29'
@@ -243,8 +244,8 @@ shlokas:
     कामस्य पुष्पव्यतिरिक्तमस्त्रं बाल्यात्परं साथ वयः प्रपेदे ॥ 1.31'
   translation: 'The unadorned adornment of the limbs is called the nose of the drunkard.
 
-    The weapon of lust, other than the flower, reached the age of accompaniment beyond
-    childhood. 1.31'
+    The weapon of lust, other than the flower, grew up with him beyond his childhood.
+    1.31'
 - sanskrit: 'उन्मीलितं तूलिकयेव चित्रं सूर्यांशुभिर्भिन्नमिवारविन्दम्।
 
     बभूव तस्यश्चतुरस्त्रशोभि वपुर्विभक्तं नवयौवनेन ॥ 1.32'
@@ -262,11 +263,11 @@ shlokas:
 - sanskrit: 'सा राजहंसैरिव सन्नताङ्गी गतेषु लीलाञ्चितविक्रमेषु ।
 
     व्यनीयत प्रत्युपदेशलुब्धै रादित्सुभिर्नूपुरसिञ्जितानि ॥ 1.34'
-  translation: 'She was as bowed down as a royal swan, and as she passed by, she playfully
-    displayed her prowess.
+  translation: 'She was as bowed down as a royal swan as she walked away, playfully
+    displaying her prowess.
 
-    The King’s anklets were adorned with shouts of joy because they were eager to
-    give him advice. 1.34'
+    The King’s anklets were adorned with shouts of joy, and he was eager to receive
+    advice from the King. 1.34'
 - sanskrit: 'वृत्तानुपूर्वे न च चातिदीर्धे जङ्घे शुभे सृष्टवतस्तदीये ।
 
     शेषाङ्गनिर्माणविधौ विधातुर्लावण्य उत्पाद्य इवास यत्नः ॥ 1.35'
@@ -279,9 +280,9 @@ shlokas:
 
     लब्ध्वापि लोके परिणाहि रूपं जातास्तदूर्वेरुपमानबाह्याः ॥ 1.36'
   translation: 'The hands of the lord of the serpents are like banana trees because
-    of their harshness on the skin and their lonely coolness
+    of their harsh skin and lonely coolness
 
-    Though you have obtained the form of a woman in this world, you are born outside
+    Though you have obtained a beautiful form in this world, you have become outside
     the comparison of the enemy. 1.36'
 - sanskrit: 'एतावता नन्वनुमेयशोभि काञ्चीगुणस्थानमनिन्दितायाः ।
 
@@ -322,15 +323,16 @@ shlokas:
 
     I argue that her arms are more delicate than the head of a flower.
 
-    Although defeated, Lord Śiva’s neck was tied with the shark-flagged ropes. 1.41'
+    Although defeated by Lord Śiva, the crocodile flag made the ropes around his neck.
+    1.41'
 - sanskrit: 'कण्ठस्य तस्याः स्तनबन्धुरस्य मुक्ताकलापस्य च निस्तलस्य ।
 
     अन्योन्यशोभाजननाद्वभूव साधारणो भूषणभूष्यभावः ॥ 1.42'
   translation: 'Her neck was covered with pearls and her breasts were covered with
     pearls
 
-    Because of the beauty of each other, the ordinary feeling of being adorned with
-    ornaments arose. 1.42'
+    Because of the beauty of each other, there was a general feeling of being adorned
+    with ornaments. 1.42'
 - sanskrit: 'चन्द्रं गता पद्मगुणान्न भुङ्क्ते पद्माश्रिता चान्द्रमसीमभिख्याम्।
 
     उमामुखं तु प्रतिपद्य लोला द्विसंश्रयां प्रीतिमवाप लक्ष्मीः ॥ 1.43'
@@ -387,8 +389,8 @@ shlokas:
     समादिदेशैकवधूं भवित्रीं प्रेम्णा शरीरार्धहरां हरस्य ॥ 1.50'
   translation: 'Once Nārada, who was a lustful man, saw the girl near his father.
 
-    Out of love for Lord Śiva, Lord Kṛṣṇa ordered Him to marry His only bride, who
-    would take away half of Lord Śiva’s body. 1.50'
+    Out of love for Lord Śiva, Lord Kṛṣṇa ordered Him to become His only bride, who
+    would take away half of His body. 1.50'
 - sanskrit: 'गुरुः प्रगल्-भेऽपि वयस्यतोऽस्यास्तस्थौ निवृत्तान्यवराभिलाषः ।
 
     ऋते कृशानोर्न हि मन्त्रपूतमर्हन्ति तेजांस्यपराणि हव्यम्॥ 1.51'
@@ -403,8 +405,8 @@ shlokas:
   translation: 'The mountain of the gods could not accept his daughter who had not
     asked for him.
 
-    A saintly person relies on mediation, even when he is desired, because he is afraid
-    of breaking his request. 1.52'
+    A saintly person relies on mediation for the sake of his desired objective because
+    he is afraid of breaking his request. 1.52'
 - sanskrit: 'यदैव पूर्वे जनने शरीरं सा दक्षरोषात्सुदती ससर्ज ।
 
     तदाप्रभृत्येव विमुक्तसङ्गः पतिः पशूनामपरिग्रहोऽभूत्॥ 1.53'
@@ -415,16 +417,16 @@ shlokas:
 - sanskrit: 'स कृत्तिवासास्तपसे यतात्मा गङ्गाप्रवाहोक्षितदेवदारु ।
 
     प्रस्थं हिमाद्रेर्मृगनाभिगन्धि किञ्चित्क्वणत्किन्नरमध्युवास ॥ 1.54'
-  translation: 'He wore a devadaru tree that was sprinkled with the flow of the Ganges
-    and was self-controlled in austerities.
+  translation: 'He wore a devadaru tree sprinkled with the flow of the Ganges and
+    self-controlled in his austerities.
 
     On the slopes of the Himālaya Mountains there lived a kinnera whose scent smelled
     like that of a deer. 1.54'
 - sanskrit: 'गणा नमेरुप्रसवावतंसा भूर्जत्वचः स्पर्शवतीर्दधानाः ।
 
     मनःशिलाविच्छुरिता निषेदुः शैलेयनद्धेषु शिलातलेषु ॥ 1.55'
-  translation: 'The hosts bowed down to the mountains, and they were dressed in brown
-    skin that touched them.
+  translation: 'The hosts bowed down to the mountains, carrying brown skins that touched
+    the mountains.
 
     They were cut off from the rocks of their minds and sat down on the rocky bottoms
     of the mountains. 1.55'

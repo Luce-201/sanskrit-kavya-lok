@@ -82,7 +82,7 @@
 
       <div class="rk-poem-list">
         {{ range first 6 (where .Site.RegularPages "Type" "poems") }}
-        <a href="{{ .Permalink }}" class="rk-poem-row">
+        <a href="{{ .RelPermalink }}" class="rk-poem-row">
           <div class="rk-poem-row-text">
             <h3 class="rk-poem-row-title">{{ .Title }}</h3>
             {{ with .Params.poet }}
@@ -113,7 +113,7 @@
           <span class="lang-en">Featured Collection</span>
         </h2>
       </div>
-      <a href="{{ .Permalink }}" class="rk-collection-banner">
+      <a href="{{ .RelPermalink }}" class="rk-collection-banner">
         {{ with .Params.image }}
         <div class="rk-collection-banner-img" style="background-image: url('{{ . }}')"></div>
         {{ else }}
@@ -143,7 +143,7 @@
       </div>
       <div class="rk-theme-cloud">
         {{ range .Site.Taxonomies.themes }}
-        <a href="{{ .Page.Permalink }}" class="rk-theme-pill">
+        <a href="{{ .Page.RelPermalink }}" class="rk-theme-pill">
           <span class="lang-hi">{{ .Page.Title }}</span>
           <span class="lang-en">{{ .Page.Params.title_en | default .Page.Title }}</span>
           <span class="rk-theme-count">{{ .Count }}</span>
@@ -182,7 +182,7 @@
       </div>
       <div class="rk-poet-stack">
         {{ range first 4 (where .Site.RegularPages "Type" "poets") }}
-        <a href="{{ .Permalink }}" class="rk-poet-row">
+        <a href="{{ .RelPermalink }}" class="rk-poet-row">
           {{ with .Params.image }}
           <img src="{{ . }}" alt="{{ $.Title }}" class="rk-poet-avatar">
           {{ else }}
@@ -237,7 +237,7 @@
         </a>
       </div>
       {{ range first 3 (where .Site.RegularPages "Type" "collections") }}
-      <a href="{{ .Permalink }}" class="rk-mini-collection-row">
+      <a href="{{ .RelPermalink }}" class="rk-mini-collection-row">
         <div class="rk-mini-coll-thumb">
           {{ with .Params.image }}<img src="{{ . }}" alt="">{{ else }}<span>{{ substr .Title 0 1 }}</span>{{ end }}
         </div>

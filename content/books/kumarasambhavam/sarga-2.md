@@ -131,9 +131,9 @@ shlokas:
 - sanskrit: 'प्रशमादर्चिषामेतदनुद्गीर्णसुरायुधम्।
 
     वृत्रस्य हन्तुः कुलिशं कुण्ठिताश्रीव लक्ष्यते ॥ 2.20'
-  translation: 'This weapon of the gods was not swallowed by the flames of the calm.
+  translation: 'This weapon of the gods was not swallowed by the flames of calmness
 
-    The sword of Vṛtrāsura’s killer looked like a frustrated Śrīmad-Bhāgavatam. 2.20'
+    The sword of Vṛtrāsura’s killer appears to have been disheveled. 2.20'
 - sanskrit: 'किं चायमरिदुर्वारः पाणौ पाशः प्रचेतसः ।
 
     मन्त्रेण हतवीर्यस्य फणिनो दैन्यमाश्रितः ॥ 2.21'
@@ -190,7 +190,7 @@ shlokas:
     गुरुं नेत्रसहस्रेण नोदयामास वासवः ॥ 2.29'
   translation: 'Then, blown by a gentle breeze, the lotus flower shone.
 
-    Indra, the King of heaven, stirred up his spiritual master with his thousand eyes.
+    Indra, the King of heaven, stirred up his spiritual master with a thousand eyes.
     2.29'
 - sanskrit: 'स द्विनेत्रो हरेश्चक्षुः सहस्रनयनाधिकम्।
 
@@ -357,8 +357,7 @@ shlokas:
 - sanskrit: 'इतः स दैत्यः प्राप्तश्रीर्नेत एवार्हति क्षयम्।
 
     विषवृक्षोऽपि संवर्ध्य स्वयं छेत्तुमसाम्प्रतम्॥ 2.55'
-  translation: 'From here that demon who has attained glory does not deserve to be
-    destroyed
+  translation: 'Hence that demon who has attained glory does not deserve to be destroyed
 
     Even a poisonous tree can be cultivated and cut down by itself at this time 2.55'
 - sanskrit: 'वृतं तेनेदमेव प्राङ्मया चास्मै प्रतिश्रुतम्।
@@ -409,7 +408,7 @@ shlokas:
     मनसा कार्यसंसिद्धौ त्वराद्विगुणरंहसा ॥ 2.63'
   translation: 'Having decided there, the king of cooking went to Cupid.
 
-    The mind accomplishes its task with twice as much haste. 2.63'
+    The mind accomplishes its task with double speed. 2.63'
 - sanskrit: 'अथ स ललितयोषिद्भ्रूलताचारुश‍ृङ्गं
 
     रतिवलयपदाङ्के चापमासज्य कण्ठे ।

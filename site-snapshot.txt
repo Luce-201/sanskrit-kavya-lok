@@ -58,6 +58,939 @@ layout: list
 
 
 ================================================================
+FILE: ./content/books/kumarasambhavam/_index.md
+================================================================
+
+---
+title: Kumarasambhavam
+poet: Kalidasa
+date: 2026-07-13
+---
+
+
+================================================================
+FILE: ./content/books/kumarasambhavam/sarga-1.md
+================================================================
+
+---
+title: उमोत्पत्तिः
+book_parent: kumarasambhavam
+weight: 1
+shlokas:
+- sanskrit: 'अस्त्युत्तरस्यां दिशि देवतात्मा हिमालयो नाम नगाधिराजः ।
+
+    पुर्वापरौ तोयनिधी वगाह्य स्थितः पृथिव्या इव मानदण्डः ॥ 1.1'
+  translation: 'In the northern part of the country is the Himalayas, the king of
+    mountains, the soul of the demigods.
+
+    The east and west submerged in the reservoir of water and stood there like a staff
+    of honor on the earth. 1.1'
+- sanskrit: 'यं सर्वशैलाः परिकल्प्य वत्सं मेरौ स्थिते दौग्धरि दोहदक्षे ।
+
+    भास्वन्ति रत्नानि महैषधीश्च पृथूपदिष्टां दुदुहुर्धरित्रीम्॥ 1.2'
+  translation: 'All the mountains designed him to be a calf, and he was skilled in
+    milking the milking cow on Mount Meru.
+
+    The shining gems and great herbs milked the earth as enjoined by Pruthu 1.2'
+- sanskrit: 'अनन्तरत्नप्रभवस्य यस्य हिमं न सौभाग्यविलोपि जातम्।
+
+    एको हि दोषो गुणसन्निपाते निमज्जतीन्दोः किरणेष्विवाङ्कः ॥ 1.3'
+  translation: 'whose snow has not been fortunately removed from the source of the
+    next gem.
+
+    There is only one fault in the confluence of the modes of nature, just as a lap
+    sinks into the rays of the moon. 1.3'
+- sanskrit: 'यश्चाप्सरोविभ्रममण्डनानां सम्पादयित्रीं शीखरैबिभर्ति ।
+
+    लाहकच्छेदविभक्तरागामकालसन्ध्यामिव धातुमत्ताम्॥ 1.4'
+  translation: 'He who carries on his peak the accomplishment of the illusory ornaments
+    of the nymphs.
+
+    She was intoxicated with metals like the twilight of time split by the cut of
+    lacquer 1.4'
+- sanskrit: 'आमेखलं सञ्चरतां घनानां छायामधः सानुगतां निषेव्य ।
+
+    उद्वेजिता वृष्टिभिराश्रयन्ते श‍ृङ्गाणि यस्यातपवन्ति सिद्धाः ॥ 1.5'
+  translation: 'Serving the belt under the shadow of the moving clouds that followed.
+
+    Disturbed by the rains, the perfected sages take shelter of the mountains on its
+    peaks. 1.5'
+- sanskrit: 'पदं तुषारस्त्रुतिधैतरक्तं यस्मिन्नदृष्ट्वापि हतद्विपानाम्।
+
+    विदन्ति मार्गं नखरन्ध्रमुक्तैर्मुक्ताफलैः केसरिणां किराताः ॥ 1.6'
+  translation: 'The footsteps of the elephants killed by the snow are red with snow
+
+    The Kirātas know the path of the lilies by their pearl fruits released from the
+    holes of their nails 1.6'
+- sanskrit: 'न्यस्ताक्षरा धातुरसेन यत्र भूर्जत्वचः कुञ्जरबिन्दुशोणाः ।
+
+    व्रजन्ति विद्याधरसुन्दरीणामूनङ्गलेखक्रिययोपयोगम्॥ 1.7'
+  translation: 'The letters were laid down with the taste of metal, where the brown
+    skin was covered with the blood of elephant drops.
+
+    They go to the place where the beautiful Vidyadharas are engaged in the rituals
+    of drawing and painting 1.7'
+- sanskrit: 'यः पूरयन्कीचकरन्ध्रभागान्दरीमुखोत्थेन समीरणेन ।
+
+    उद्गास्यतामिच्छति किन्नराणां तानप्रदायित्वमिवोपगन्तुम्॥ 1.8'
+  translation: 'He filled the holes in the mud with the breeze that rose from the
+    mouth of the mountain.
+
+    He wishes to approach the kinneras as if he were giving them away 1.8'
+- sanskrit: 'कपोलकण्डूः करिभिर्विनेतुं विघट्टितानां सरलद्रुमाणाम्।
+
+    यत्र स्नुतक्षीरतया प्रसूतः सानुनि गन्धः सुरभीकरोति ॥ 1.9'
+  translation: 'Itching on the foreheads of the simple trees that have been dismantled
+    by the elephants.
+
+    The fragrance of the slopes produced by the flowing milk of the river is fragrant.
+    1.9'
+- sanskrit: 'वनेचराणां वनितासखानां दरीगृहोत्सङ्गनिषक्तभासः ।
+
+    भवन्ति यत्रौषधयो रजन्यामतैलपूराः सुरतप्रदीपाः ॥ 1.10'
+  translation: 'The light of the cave houses of the forest-dwelling women’s friends
+
+    At night the herbs grow in the forest, full of oil and illuminated by pleasing
+    lamps. 1.10'
+- sanskrit: 'उद्वेजयत्यङ्गलिपार्ष्णिभागान्मार्गे शिलीभूतहिमेऽपि यत्र ।
+
+    न दुर्वहश्रोणिपयोधरार्ता भिन्दन्ति मन्दां गतिमश्वमुख्यः ॥ 1.11'
+  translation: 'Even in the snow that has become a rock on the road, it disturbs the
+    heel parts of the fingers.
+
+    The horse-heads, whose hips and breasts are difficult to carry, do not break the
+    slow pace. 1.11'
+- sanskrit: 'दिवाकराद्रक्षति यो गुहासु लीनं दिवाभीतमिवान्धकारम्।
+
+    क्षुद्रेऽपि नूनं शरणं प्रपन्ने ममत्वमुच्चैःशिरसां सतीव ॥ 1.12'
+  translation: 'He who protects from the sun the darkness that is absorbed in the
+    caves as if afraid of the day
+
+    Surely I have taken refuge in you, even though I am insignificant, just as a chaste
+    woman raises her head high. 1.12'
+- sanskrit: 'लाङ्गूलविक्षेपविसर्पिशोभिरितस्ततश्चन्द्र मरीचिगौरैः ।
+
+    यस्यार्थयुक्तं गिरिराजशब्दं कुर्वन्ति वालव्यजनैश्चमर्यः ॥ 1.13'
+  translation: 'The moon, pepper and white, were all around the tail, waving and crawling.
+
+    The Chamaryas with their wooden fans make the meaningful sound of the king of
+    the mountains. 1.13'
+- sanskrit: 'यत्रांशुकाक्षेपविलज्जितानां यदृच्छया किम्पुरुषाङ्गनानाम्।
+
+    दरीगृहद्वार विलम्बिम्बीम्बास्तिरस्करिण्यो जलदा भवन्ति ॥ 1.14'
+  translation: 'Where the women of Kimpurusha were shy of throwing their robes at
+    random
+
+    The doors of caves and houses are like clouds, and the doors of the houses are
+    covered with clouds. 1.14'
+- sanskrit: 'भागीरथीनिर्झरसिकराणां वोढा मुहमः कम्पितदेवदारुः ।
+
+    यद्वायुरन्विष्टमृगैः किरातैरासेव्यते भिन्नशिशण्डिबर्हः ॥ 1.15'
+  translation: 'The cedar tree trembling carried by the waterfalls of the Bhagirathi
+    river
+
+    The wind that blows in the air is breathed by the deer and the insects. 1.15'
+- sanskrit: 'सप्तर्षिहस्तावचिता वशेषाण्यधो विवस्वानपरिवर्तमानः ।
+
+    पद्मानि यस्याग्रसरोरुहाणि प्रबौधयत्यूर्ध्वमुखैर्मयूखैः ॥ 1.16'
+  translation: 'The remains of the seven sages were cut off by the hands of the demigods.
+
+    The rays of the Lord’s lotuses, which are facing upwards, enlighten the tips of
+    the lotuses. 1.16'
+- sanskrit: 'यज्ञाङ्गयोनित्वमवेक्ष्य यस्य सारं धरित्रीधरणक्षमं च ।
+
+    प्रजापतिः कल्पितयज्ञभागं शैलाधिपत्यं स्वयमन्वतिष्ठत्॥ 1.17'
+  translation: 'Considering that the sacrificial organs are the source of the universe,
+    the essence of the universe is that it is capable of sustaining the earth.
+
+    Prajapati himself assumed the kingdom of the mountains as part of the sacrifice
+    arranged for him 1.17'
+- sanskrit: 'स मानसीं मेरु-सखः पितॄणां कन्यां कुलस्य स्थितये स्थितिज्ञः ।
+
+    मेनां मुनीनां अपि माननीयां आत्मानुरुपां विधिनोपयेमे ॥ 1.18'
+  translation: 'He was a friend of Meru, the daughter of his ancestors, and he knew
+    the position of the family.
+
+    He married Me, who was respected even by the greatest sages, according to the
+    prescribed rituals. 1.18'
+- sanskrit: 'स मानसिं मेरुसखः पितॄणां कन्यां कुलस्य स्थितये स्थितिज्ञः ।
+
+    मेनां मुनीनामपि माननीयामात्मानुरुपां विधिनोपयेमे ॥ 1.18'
+  translation: 'He was a friend of Meru, the daughter of his ancestors, and he knew
+    the position of the family.
+
+    He married Me, who was respected even by the sages, in the form of his own self.
+    1.18'
+- sanskrit: 'कालक्रमेणाथ तयोः प्रवृत्ते स्वरुपयोग्ये सुरतप्रसङ्गे ।
+
+    मनोरमं यौवनमुद्वहन्त्या गर्भेऽवद्भूधरराजपत्न्याः ॥ 1.19'
+  translation: 'In time, the two of them began to engage in pleasure, which was appropriate
+    for them.
+
+    The consort of the king of the mountains conceived a beautiful youth. 1.19'
+- sanskrit: 'असूत सा नागवधूपभोग्यं मैनाकमम्भोनिधिबद्धसख्यम्।
+
+    क्रुद्धेऽपि पक्षच्छिदि वृत्रशत्राववेदनाज्ञं कुलिशक्षतानाम्॥ 1.20'
+  translation: 'She gave birth to Mainaka who was enjoyed by the serpent bride and
+    who was bound to the treasure of water
+
+    When Vritrasatra cut off his wings even in anger he was ignorant of the pain of
+    those who knew his family 1.20'
+- sanskrit: 'अथावमानेन पितुः प्रयुक्ता दक्षस्य कन्या भवपूर्वपत्नी ।
+
+    सती सती योगविसृष्टदेहा तां जन्मने शैलवधूं प्रपेदे ॥ 1.21'
+  translation: 'Then the daughter of Dakṣa, who was his former wife, was used by her
+    father in disgrace.
+
+    The chaste lady, whose body was abandoned by mystic yoga, took birth as the bride
+    of the mountains. 1.21'
+- sanskrit: 'सा भूधराणामधिपेन तस्यां समाधिमत्यामुदपादि भव्या ।
+
+    सम्यक्प्रयोगादपरिक्षतायां नीताविवोत्साहगुणेन सम्पत्॥ 1.22'
+  translation: 'That beautiful woman, who was in trance, was blessed by the lord of
+    the earth.
+
+    By the virtue of enthusiasm wealth seemed to have been brought to a woman who
+    had not been examined by proper use. 1.22'
+- sanskrit: 'प्रसन्नदिक्पांसुविविक्तवातं शङ्खस्वनानन्तरपुष्पवृष्टि ।
+
+    शरीरिणां स्थावरजङ्गमानां सुखाय तज्जन्मदिनं बभुव ॥ 1.23'
+  translation: 'The wind was clear of the dust from the cheerful directions, and the
+    sound of the conchshell was followed by a shower of flowers.
+
+    The day of his birth was celebrated for the happiness of all living entities,
+    moving and nonmoving. 1.23'
+- sanskrit: 'तया दुहित्रा सुतरां सवित्री स्फुरत्प्रभामण्डलया चकासे ।
+
+    विदूरभूमिर्नवमेघशब्दा दुद्भिन्नया रत्नशलाकयैव ॥ 1.24'
+  translation: 'The daughter of the sun shone brightly with her sparkling radiance.
+
+    The sound of nine clouds in the distance resembled a jewel-shaped pendant. 1.24'
+- sanskrit: 'दिने दिने सा परिवर्धमाना लब्धोदया चान्द्रमसीव लेख ।
+
+    पुपोष लावण्यमयान्विशेषाञ्जयोत्स्नान्तराणीव कलान्तराणि ॥ 1.25'
+  translation: 'Day by day she grew and became as bright as the moon.
+
+    She maintained all kinds of beauty, just as the flowers of the universe pass through
+    the age of conquest. 1.25'
+- sanskrit: 'तां पार्वतीत्याभिजनेन नाम्ना बन्धुप्रियां बन्धजनो जहाव ।
+
+    उमेति मात्रा तपसो निषिद्धा पश्चादुमाख्यां सुमुखो जगाम ॥ 1.26'
+  translation: 'The relatives of the Lord abandoned that beloved wife, whom they named
+    Pārvatī.
+
+    When his mother, Uma, forbade him to perform austerities, he later went to the
+    name of Sumukha. 1.26'
+- sanskrit: 'महीभृतः पुत्रवतोऽपि दृष्टिस्तस्मिन्नपत्ये न जगाम तृप्तिम्।
+
+    अनन्तपुष्पस्य मधोर्हि चूते द्विरेफमाला सविशेषसङ्गा ॥ 1.27'
+  translation: 'Even though the lord of the earth had a son his eyes were not satisfied
+    with his husband
+
+    The honey of the mango tree with its infinite flowers is very beautiful. 1.27'
+- sanskrit: 'प्रभामहत्या शिखयेव दीपस्त्रिमार्गयेव त्रिदिवस्य मार्गः ।
+
+    संस्कारवत्येव गिरा मनीषी तया स पूतश्च विभूषितश्च ॥ 1.28'
+  translation: 'The killing of light is like the peak of a lamp, and the path of heaven
+    is like the three paths.
+
+    The intelligent man was purified and adorned by the words of the ritualistic ceremonies.
+    1.28'
+- sanskrit: 'मन्दाकिनीसैकतवेदिकाभिः सा कन्दुकैः कृत्रिमपुत्रकैश्च ।
+
+    रेमे मुहिर्मध्यगता सखीनां क्रीडारसं निर्विशतीव बाल्ये ॥ 1.29'
+  translation: 'She was surrounded by altars surrounded by the river Mandakini and
+    by balls and artificial children
+
+    She enjoyed herself in the midst of her friends, as if she were entering the pastimes
+    of her childhood. 1.29'
+- sanskrit: 'तां हंसमालाः शरदीव गङ्गां महौषधिं नक्तमिवात्मभासः ।
+
+    स्थिरोपदेशामुपदेशकाले प्रपेदिरे प्राक्तनजन्मविद्याः ॥ 1.30'
+  translation: 'The garlands of swans shone like the autumn Ganges, the great herb,
+    and the night shone like the Self.
+
+    Those who had learned the truth about their past births attained firm instruction
+    at the time of instruction. 1.30'
+- sanskrit: 'असम्भृतं मण्डनमङ्गयष्टेरनासवाख्यं करणं मदस्य ।
+
+    कामस्य पुष्पव्यतिरिक्तमस्त्रं बाल्यात्परं साथ वयः प्रपेदे ॥ 1.31'
+  translation: 'The unadorned adornment of the limbs is called the nose of the drunkard.
+
+    The weapon of lust, other than the flower, reached the age of accompaniment beyond
+    childhood. 1.31'
+- sanskrit: 'उन्मीलितं तूलिकयेव चित्रं सूर्यांशुभिर्भिन्नमिवारविन्दम्।
+
+    बभूव तस्यश्चतुरस्त्रशोभि वपुर्विभक्तं नवयौवनेन ॥ 1.32'
+  translation: 'It was picturesque like a paintbrush opened like a lotus flower broken
+    by the rays of the sun
+
+    His youthful body appeared beautiful with four weapons. 1.32'
+- sanskrit: 'अभ्युन्नताङ्गुष्ठनखप्रभाभिर्निक्षेपणाद्रागमिवोद्गिरन्तौ ।
+
+    आजह्रृतुस्तच्चरणौ पृथिव्यां स्थलारविन्दश्रियमव्यवस्थाम्॥ 1.33'
+  translation: 'Their raised thumbs and nails shone like passion as if they were being
+    thrown away.
+
+    His feet carried the beauty of the lotus on the earth 1.33'
+- sanskrit: 'सा राजहंसैरिव सन्नताङ्गी गतेषु लीलाञ्चितविक्रमेषु ।
+
+    व्यनीयत प्रत्युपदेशलुब्धै रादित्सुभिर्नूपुरसिञ्जितानि ॥ 1.34'
+  translation: 'She was as bowed down as a royal swan, and as she passed by, she playfully
+    displayed her prowess.
+
+    The King’s anklets were adorned with shouts of joy because they were eager to
+    give him advice. 1.34'
+- sanskrit: 'वृत्तानुपूर्वे न च चातिदीर्धे जङ्घे शुभे सृष्टवतस्तदीये ।
+
+    शेषाङ्गनिर्माणविधौ विधातुर्लावण्य उत्पाद्य इवास यत्नः ॥ 1.35'
+  translation: 'The circle was not too long, and the thighs were not too long, but
+    the auspicious legs were created by him.
+
+    The effort of the creator to produce the beauty of the remaining parts of the
+    body seemed to be produced. 1.35'
+- sanskrit: 'नागेन्द्रहस्तास्त्वचि कर्कशत्वादेकान्तशैत्यात्कदलीविशेषाः ।
+
+    लब्ध्वापि लोके परिणाहि रूपं जातास्तदूर्वेरुपमानबाह्याः ॥ 1.36'
+  translation: 'The hands of the lord of the serpents are like banana trees because
+    of their harshness on the skin and their lonely coolness
+
+    Though you have obtained the form of a woman in this world, you are born outside
+    the comparison of the enemy. 1.36'
+- sanskrit: 'एतावता नन्वनुमेयशोभि काञ्चीगुणस्थानमनिन्दितायाः ।
+
+    आरोपितं यद् गिरिशेन पश्चादनन्यनारीकमनीयमङ्कम्॥ 1.37'
+  translation: 'Such is the inconceivable beauty of the golden virtues of the irreproachable
+    woman.
+
+    The lap of an exclusive woman was placed on the lap by Lord Girisha 1.37'
+- sanskrit: 'तस्याः प्रविष्टा नतनाभिरन्ध्रं रराज तन्वी नवलोमराजिः ।
+
+    नीवीमतिक्रम्य सितेतरस्य तन्मेखलामध्यमणेरिवार्चिः ॥ 1.38'
+  translation: 'The slender woman with her new hair shone through the hole of her
+    bowed navel
+
+    The flame of the Lord crossed the skirt of the white man’s belt like a jewel in
+    the middle of it. 1.38'
+- sanskrit: 'मध्येन सा वेदिविलग्नमध्या वलित्रयं चारु बभार बाला ।
+
+    आरोहणार्थं नवयौवनेन कामस्य सोपानमिव प्रयुक्तम्॥ 1.39'
+  translation: 'In the middle of the altar, the young woman carried three beautiful
+    balls.
+
+    It was like a ladder used by lust in his youth to climb up 1.39'
+- sanskrit: 'अन्योन्यमुत्पीडयदुत्पलाक्ष्याः स्तनद्वयं पाण्डु तथा प्रवृद्धम्।
+
+    मध्यं यथा श्याममुखस्य तस्य मृणालसूत्रान्तरमप्यलभ्यम्॥ 1.40'
+  translation: 'The lotus-eyed woman''s breasts became white and enlarged
+
+    Even the middle of his dark face could not be found between the threads of lotuses
+    1.40'
+- sanskrit: 'लोके सुकुमारत्वमेव कुसुमास्त्रस्य साधकत्वमिति स्थिते सत्याह -
+
+    शिरीषपुष्पाधिकसौकुमार्यौ बाहू तदीयाविति मे वितर्कः ।
+
+    पराजितेनापि कृतौ हरस्य यौ कण्ठपाशौ मकरध्वजेन ॥ 1.41'
+  translation: 'When it is said that tenderness in the world is the means of the flower
+    weapon, Satya argues:
+
+    I argue that her arms are more delicate than the head of a flower.
+
+    Although defeated, Lord Śiva’s neck was tied with the shark-flagged ropes. 1.41'
+- sanskrit: 'कण्ठस्य तस्याः स्तनबन्धुरस्य मुक्ताकलापस्य च निस्तलस्य ।
+
+    अन्योन्यशोभाजननाद्वभूव साधारणो भूषणभूष्यभावः ॥ 1.42'
+  translation: 'Her neck was covered with pearls and her breasts were covered with
+    pearls
+
+    Because of the beauty of each other, the ordinary feeling of being adorned with
+    ornaments arose. 1.42'
+- sanskrit: 'चन्द्रं गता पद्मगुणान्न भुङ्क्ते पद्माश्रिता चान्द्रमसीमभिख्याम्।
+
+    उमामुखं तु प्रतिपद्य लोला द्विसंश्रयां प्रीतिमवाप लक्ष्मीः ॥ 1.43'
+  translation: 'She who has gone to the moon does not enjoy the virtues of the lotus,
+    and she who takes refuge in the lotus is known as the moon-goddess.
+
+    The goddess of fortune, Lola, reached the face of Lord Uma and felt pleasure in
+    her dual shelter. 1.43'
+- sanskrit: 'पुष्पं प्रवालोपहितं यदि स्यान्मुक्ताफलं वा स्फुटविद्रुमस्थम्।
+
+    ततोऽनुकुर्याद्विशदस्य तस्या स्ताम्रौष्ठपर्यस्तरुचः स्मितस्य ॥ 1.44'
+  translation: 'If the flower is covered with coral or the pearl fruit is in crystalline
+    coral
+
+    Then he imitated her bright smile, which extended beyond her red lips. 1.44'
+- sanskrit: 'स्वरेण तस्याममृतस्रुतेव प्रजल्पितायामभिजातवाचि ।
+
+    अप्यन्यपुष्टा प्रतिकूलशब्दा श्रोतुर्वितन्त्रीरिव ताड्यमाना ॥ 1.45'
+  translation: 'Her voice was like a stream of nectar, and her words were so beautiful.
+
+    When she was being beaten by others, she heard noises that were unfavorable to
+    her. 1.45'
+- sanskrit: 'प्रवातनीलोत्पलनिर्विशेषमधीरविप्रेक्षितमायताक्ष्या ।
+
+    तया गृहितं नु मृगाङ्गनाभ्यस्ततो गृहीतं नु मृगाङ्गनाभिः ? ॥ 1.46'
+  translation: 'Her large eyes looked patiently at the blue lotus flower in the wind.
+
+    Did she catch it from the deer and then did the deer catch it? ॥ 1.46'
+- sanskrit: 'तस्याः शलाकाञ्जननिर्मितेव कान्तिर्भ्रुवोरायतलेखयोर्या ।
+
+    तां वीक्ष्य लिलाचतुरामनङ्गः स्वचापसौन्दर्यमदं मुमोच ॥ 1.47'
+  translation: 'The brightness of her raised lines on her eyebrows was like that of
+    a bar of collyrium
+
+    Seeing her playful, Lord Śiva released his pride in the beauty of his bow. 1.47'
+- sanskrit: 'लज्जा तिरश्चां यदि चेतसि स्यादसंशयं पर्वतराजपुत्र्याः ।
+
+    तं केशपाशं प्रसमीक्ष्य कुर्युर्बालप्रियत्वं शिथिलं चमर्यः ॥ 1.48'
+  translation: 'If you are ashamed of yourself, you will undoubtedly be the daughter
+    of the king of the mountains.
+
+    They should look at the rope of their hair and make it look like a child’s favorite
+    thing. 1.48'
+- sanskrit: 'सर्वोपमाद्रव्यसमुच्चयेन यथाप्रदेशं विनिवेशितेन ।
+
+    सा निर्मिता विश्वसृजा प्रयत्नादेकस्थसौन्दर्यदिदृक्षयेव ॥ 1.49'
+  translation: 'By a combination of all the metaphorical materials, placed in the
+    right place.
+
+    The creator of the universe endeavored to see the beauty of the universe in one
+    place. 1.49'
+- sanskrit: 'तां नारदः कामचरः कदाचित्कन्यां किल प्रेक्ष्य पितुः समीपे ।
+
+    समादिदेशैकवधूं भवित्रीं प्रेम्णा शरीरार्धहरां हरस्य ॥ 1.50'
+  translation: 'Once Nārada, who was a lustful man, saw the girl near his father.
+
+    Out of love for Lord Śiva, Lord Kṛṣṇa ordered Him to marry His only bride, who
+    would take away half of Lord Śiva’s body. 1.50'
+- sanskrit: 'गुरुः प्रगल्-भेऽपि वयस्यतोऽस्यास्तस्थौ निवृत्तान्यवराभिलाषः ।
+
+    ऋते कृशानोर्न हि मन्त्रपूतमर्हन्ति तेजांस्यपराणि हव्यम्॥ 1.51'
+  translation: 'The spiritual master, though proud of his friend, ceased to desire
+    other boons.
+
+    Except for the emaciated, no other oblations purified by mantras deserve to be
+    offered to the Lord. 1.51'
+- sanskrit: 'अयाचितारं न हि देवदेवमद्रिः सुतां ग्राहयितुं शशाक ।
+
+    अभ्यर्थनाभङ्गभयेन साधुर्माध्यस्थ्यमिष्टेऽप्यवलम्बतेऽर्थे ॥ 1.52'
+  translation: 'The mountain of the gods could not accept his daughter who had not
+    asked for him.
+
+    A saintly person relies on mediation, even when he is desired, because he is afraid
+    of breaking his request. 1.52'
+- sanskrit: 'यदैव पूर्वे जनने शरीरं सा दक्षरोषात्सुदती ससर्ज ।
+
+    तदाप्रभृत्येव विमुक्तसङ्गः पतिः पशूनामपरिग्रहोऽभूत्॥ 1.53'
+  translation: 'When she was born in the past, she became angry with Dakṣa and gave
+    birth to a beautiful tooth.
+
+    From that time onwards his husband was freed from attachment to animals 1.53'
+- sanskrit: 'स कृत्तिवासास्तपसे यतात्मा गङ्गाप्रवाहोक्षितदेवदारु ।
+
+    प्रस्थं हिमाद्रेर्मृगनाभिगन्धि किञ्चित्क्वणत्किन्नरमध्युवास ॥ 1.54'
+  translation: 'He wore a devadaru tree that was sprinkled with the flow of the Ganges
+    and was self-controlled in austerities.
+
+    On the slopes of the Himālaya Mountains there lived a kinnera whose scent smelled
+    like that of a deer. 1.54'
+- sanskrit: 'गणा नमेरुप्रसवावतंसा भूर्जत्वचः स्पर्शवतीर्दधानाः ।
+
+    मनःशिलाविच्छुरिता निषेदुः शैलेयनद्धेषु शिलातलेषु ॥ 1.55'
+  translation: 'The hosts bowed down to the mountains, and they were dressed in brown
+    skin that touched them.
+
+    They were cut off from the rocks of their minds and sat down on the rocky bottoms
+    of the mountains. 1.55'
+- sanskrit: 'तुषारसङ्घातशिलाः खुराग्रैः समुल्लिखन्दर्पकलः ककुद्मान्।
+
+    दृष्टः कथञ्चिद्गवयैर्विविग्नैरसोढसिंहध्वनिरुन्ननाद ॥ 1.56'
+  translation: 'The rocks of the snow-covered mountains were scratched with the tips
+    of their hooves
+
+    Somehow he was seen by the cows, who were terrified, and he roared like an unbearable
+    lion. 1.56'
+- sanskrit: 'तत्राग्निमाधाय समित्समिद्धं स्वमेव मूर्त्यन्तरमष्टमूर्तिः ।
+
+    स्वयं विधाता तपसः फलानां केनापि कामेन तपश्चचार ॥ 1.57'
+  translation: 'There, in the eight-figured form, he placed the fire in the sacrificial
+    fire and burned it in his own form.
+
+    The creator himself performed austerities for the sake of the fruits of his austerities.
+    1.57'
+- sanskrit: 'अनर्घ्यमर्घ्येण तमद्रिनाथः स्वर्गौकसामर्चितमर्चयित्वा ।
+
+    आराधनायस्य सखीसमेतां समादिदेश प्रयतां तनूजाम्॥ 1.58'
+  translation: 'The lord of the mountains worshiped him with offerings of arghya,
+    which was worshiped by the inhabitants of heaven.
+
+    He ordered his attentive daughter along with her companions to worship him 1.58'
+- sanskrit: 'प्रत्यर्थि-भूतां अपि तां समाधेः
+
+    शुश्रूषमाणां गिरिशोऽनुमेने ।
+
+    विकार-हेतौ सति विक्रियन्ते
+
+    येषां न चेतांसि त एव धीराः ॥ 1.59'
+  translation: 'Even that of the opponent-being of Samadhi
+
+    Giriśa assumed that she was serving him.
+
+    They are sold in the case of disturbance
+
+    Those who have no consciousness are the ones who are sober. 1.59'
+- sanskrit: 'अवचितबलिपुष्पा वेदिसम्मार्गदक्षा
+
+    नियमविधिजलानां बर्हिषां चोपनेत्री ।
+
+    गिरिशमुपचचार प्रत्यहं सा सुकेशी
+
+    नियमितपरिखेदा तच्छिरश्चन्द्रपादैः ॥ 1.60'
+  translation: 'Avachitabalipushpa vedisammargadaksha
+
+    She is the leader of the peacocks in the waters of rituals and rituals.
+
+    The beautiful haired woman approached Girish every day
+
+    His head was regularly covered with the feet of the moon. 1.60'
+---
+
+
+================================================================
+FILE: ./content/books/kumarasambhavam/sarga-2.md
+================================================================
+
+---
+title: ब्रह्मसाक्षात्कारः
+book_parent: kumarasambhavam
+weight: 2
+shlokas:
+- sanskrit: 'तस्मिन्विप्रकृताः काले तारकेण दिवौकसः ।
+
+    तुरासाहं पुरोधाय धाम स्वायम्भुवं ययुः ॥ 2.1'
+  translation: 'At that time the demigods were separated by a star.
+
+    They went to the abode of Svāyambhuva Manu with Turāsāha as their priest. 2.1'
+- sanskrit: 'तेषामाविरभूद्ब्रह्मा परिम्लानमुखश्रियाम्।
+
+    सरसां सुप्तपद्मानां प्रातर्दीधितिमानिव ॥ 2.2'
+  translation: 'Brahma appeared to them with the beauty of their faces withered.
+
+    The sleeping lotuses of the lakes were as bright as the morning light. 2.2'
+- sanskrit: 'अथ सर्वस्य धातारं ते सर्वे सर्वतोमुखम्।
+
+    वागीशं वाग्भिरर्थ्याभिः प्रणिपत्योपतस्थिरे ॥ 2.3'
+  translation: 'Then the creator of all, they all faced everywhere.
+
+    They bowed down to the Lord of speech with meaningful words and stood before Him.
+    2.3'
+- sanskrit: 'नमस्त्रिमूर्तये तुभ्यं प्राक्सृष्टेः केवलात्मने ।
+
+    गुणत्रयविभागाय पश्चाद्भेदमुपेयुषे ॥ 2.4'
+  translation: 'I offer my obeisances to You, the threefold form, the only Self of
+    the pre-creation.
+
+    When the three modes of material nature are divided into two parts, they are later
+    distinguished. 2.4'
+- sanskrit: 'यदमोघमपामन्तरुप्तं बीजमज त्वया ।
+
+    अतश्चराचरं विश्वं प्रभवस्तस्य गीयसे ॥ 2.5'
+  translation: 'O unborn one, You have planted the infallible seed within the waters.
+
+    Therefore, you are glorified as the source of all moving and nonmoving things.
+    2.5'
+- sanskrit: 'तिसृभिस्त्वमवस्थाभिर्महिमानमुदीरयन्।
+
+    प्रलयस्थितिसर्गाणामेकः कारणतां गतः ॥ 2.6'
+  translation: 'You uttered glory in three states
+
+    He alone became the cause of all creation, maintenance and annihilation. 2.6'
+- sanskrit: 'स्त्रीपुंसावात्मभागौ ते भिन्नमूर्तेः सिसृक्षया ।
+
+    प्रसूतिभाजः सर्गस्य तावेव पितरौ स्मृतौ ॥ 2.7'
+  translation: 'You wanted to create a different form of the two parts of yourself,
+    male and female.
+
+    The two fathers of creation are considered to be the source of procreation. 2.7'
+- sanskrit: 'स्वकालपरिमाणेन व्यस्तरात्रिन्दिवस्य ते ।
+
+    यौ तु स्वप्नावबोधौ तौ भूतानां प्रलयोदयौ ॥ 2.8'
+  translation: 'The night and the day are spread out in the measure of their own time.
+
+    The two modes of material nature, namely dreams and realizations, are the causes
+    of annihilation of all living entities. 2.8'
+- sanskrit: 'जगद्योनिरयोनिस्त्वं जगदन्तो निरन्तकः ।
+
+    जगदादिरनादिस्त्वं जगदीशो निरीश्वरः ॥ 2.9'
+  translation: 'You are the source of the universe and the end of the universe.
+
+    You are the beginning of the universe and the Lord of the universe without any
+    lord. 2.9'
+- sanskrit: 'आत्मानमात्मना वेत्सि सृजस्यात्मानमात्मना ।
+
+    आत्मना कृतिना च त्वमात्मन्येव प्रलीयसे ॥ 2.10'
+  translation: 'You know yourself by yourself, and you create yourself by yourself.
+
+    You are merged in Yourself by Your own actions. 2.10'
+- sanskrit: 'द्रवः सङ्घातकठिनः, स्थूलः सूक्ष्मो लघुर्गुरुः ।
+
+    व्यक्तो व्यक्तेतरश्चासि प्राकाम्यं ते विभूतिषु ॥ 2.11'
+  translation: 'The liquid is hard to aggregate, coarse, fine, light and heavy.
+
+    You are manifest and other than manifest, and You are desirable in Your opulences.
+    2.11'
+- sanskrit: 'उद्घातः प्रणवो यासां न्यायैस्त्रिभिरुदीरणम्।
+
+    कर्म यज्ञः फलं स्वर्गस्तासां त्वं प्रभवो गिराम्॥ 2.12'
+  translation: 'Udghata is the oṁkāra, which is uttered by the three laws.
+
+    Action, sacrifice, fruit, heaven, Thou art the source of their words. 2.12'
+- sanskrit: 'त्वामामनन्ति प्रकृतिं पुरुषार्थप्रवर्तिनीम्।
+
+    तद्दर्शिनमुदासीनं त्वामेव पुरुषं विदुः ॥ 2.13'
+  translation: 'They call Thee Nature, the pursuer of the purpose of man.
+
+    You are the only person who sees that and is indifferent to it. 2.13'
+- sanskrit: 'त्वं पितॄणामपि पिता, देवानामपि देवता ।
+
+    परतोऽपि परश्चासि, विधाता वेधसामपि ॥ 2.14'
+  translation: 'You are the father of the ancestors and the goddess of the gods.
+
+    You are the Supreme Being and the Supreme Being, the creator of all creation.
+    2.14'
+- sanskrit: 'त्वमेव हव्यं होता च, भोज्यं भोक्ता च शाश्वतः ।
+
+    वेद्यं च वेदिता चासि, ध्याता ध्येयं च यत्परम्॥ 2.15'
+  translation: 'You alone are the offerer of sacrifices and the enjoyer of food forever
+
+    Thou art the knowable and the known, the meditator and the object of meditation,
+    that which is beyond. 2.15'
+- sanskrit: 'इति तेभ्यः स्तुतीः श्रुत्वा यथार्था हृदयङ्गमाः ।
+
+    प्रसादाभिमुखो वेधाः प्रत्युवाच दिवौकसः ॥ 2.16'
+  translation: 'Hearing these praises from them, the hearts of the people were truly
+    touched.
+
+    Faced with grace, Vedha replied to the demigods. 2.16'
+- sanskrit: 'पुराणस्य कवेस्तस्य चतुर्मुखसमीरिता ।
+
+    प्रवृत्तिरासीच्छब्दानां चरितार्था चतुष्टयी ॥ 2.17'
+  translation: 'The poet of the Purāṇas is composed of four faces.
+
+    The instinct of the words was the fourfold meaning of their movements. 2.17'
+- sanskrit: 'स्वागतं स्वानधीकारान्प्रभावैरवलम्ब्य वः ।
+
+    युगपद्युगबाहुभ्यः प्राप्तेभ्यः प्राज्यविक्रमाः ॥ 2.18'
+  translation: 'Welcome to you, relying on your own rights and influences.
+
+    They were able to conquer the arms of the ages at the same time. 2.18'
+- sanskrit: 'किमिदं द्युतिमात्मीयां न बिभ्रति यथा पुरा ।
+
+    हिमक्लिष्टप्रकाशानि ज्योतींषीव मुखानि वः ॥ 2.19'
+  translation: 'Why doesn’t this effulgence carry within itself as it did in the past?
+
+    Your faces are as bright as lights, snow-covered. 2.19'
+- sanskrit: 'प्रशमादर्चिषामेतदनुद्गीर्णसुरायुधम्।
+
+    वृत्रस्य हन्तुः कुलिशं कुण्ठिताश्रीव लक्ष्यते ॥ 2.20'
+  translation: 'This weapon of the gods was not swallowed by the flames of the calm.
+
+    The sword of Vṛtrāsura’s killer looked like a frustrated Śrīmad-Bhāgavatam. 2.20'
+- sanskrit: 'किं चायमरिदुर्वारः पाणौ पाशः प्रचेतसः ।
+
+    मन्त्रेण हतवीर्यस्य फणिनो दैन्यमाश्रितः ॥ 2.21'
+  translation: 'What is this enemy’s difficult rope in the hands of the Pracetās?
+
+    He resorted to the misery of the phoenix, whose strength had been destroyed by
+    the mantra. 2.21'
+- sanskrit: 'कुबेरस्य मनःशल्यं शंसतीव पराभवम्।
+
+    अपविद्धगदो बाहुर्भग्नशाख इव द्रुमः ॥ 2.22'
+  translation: 'Kubera''s mental surgery seems to herald his defeat.
+
+    His club and arm were thrown away, and he looked like a tree with broken branches.
+    2.22'
+- sanskrit: 'यमोऽपि विलिखन्भूमिं दण्डेनास्तमितत्विषा ।
+
+    कुरुतेऽस्मिन्नमोघेऽपि निर्वाणालातलाघवम्॥ 2.23'
+  translation: 'Yamarāja also scratched the ground with his rod, which shone brightly.
+
+    Even in this infallible world it makes the fire of Nirvana light. 2.23'
+- sanskrit: 'अमी च कथमादित्याः प्रतापक्षतिशीतलाः ।
+
+    चित्रन्यस्ता इव गताः प्रकामालोकनीयताम्॥ 2.24'
+  translation: 'And how are these suns so cool with the wings of glory?
+
+    They seemed to have been placed in wonderful places Let us look at them at will
+    2.24'
+- sanskrit: 'पर्याकुलत्वान्मरुतां वेगभङ्गोऽनुमीयते ।
+
+    अम्भसामोघसंरोधः प्रतीपगमनादिव ॥ 2.25'
+  translation: 'Because of the disturbance, the Maruts’ speed is inferred to be broken.
+
+    The waters are infallible, as if they were going to the opposite side. 2.25'
+- sanskrit: 'आवर्जितजटामौलिविलम्बिशशिकोटयः ।
+
+    रुद्राणामपि मुर्धानः क्षतहुङ्कारशंसिनः ॥ 2.26'
+  translation: 'They covered their matted hair and crowned their hair.
+
+    They are the heads of the Rudras and are the heralds of the wounded. 2.26'
+- sanskrit: 'लब्धप्रतिष्ठाः प्रथमं यूयं किं बलवत्तरैः ।
+
+    अपवादैरिवोत्सर्गाः कृतव्यावृत्तयः परैः ॥ 2.27'
+  translation: 'You’ve gained your reputation first, what about the stronger ones?
+
+    They were reversed by others as if they had been abandoned by exceptions 2.27'
+- sanskrit: 'तद्ब्रूत वत्साः किमितः प्रार्थयध्वे समागताः ।
+
+    मयि सृष्टिर्हि लोकानां रक्षा युष्मास्ववस्थिता ॥ 2.28'
+  translation: 'Tell me, my children, why have you come together to pray?
+
+    The creation of the worlds and their protection depend on Me. 2.28'
+- sanskrit: 'ततो मन्दानिलोद्धूतकमलाकरशोभिना ।
+
+    गुरुं नेत्रसहस्रेण नोदयामास वासवः ॥ 2.29'
+  translation: 'Then, blown by a gentle breeze, the lotus flower shone.
+
+    Indra, the King of heaven, stirred up his spiritual master with his thousand eyes.
+    2.29'
+- sanskrit: 'स द्विनेत्रो हरेश्चक्षुः सहस्रनयनाधिकम्।
+
+    वाचस्पतिरुवाचेदं प्राञ्जलिर्जलजासनम्॥ 2.30'
+  translation: 'That two-eyed Hari has more than a thousand eyes.
+
+    Vachaspati with folded palms addressed the seat of water 2.30'
+- sanskrit: 'एवं यदात्थ भगवन्नामृष्टं नः परैः पदम्।
+
+    प्रत्येकं विनियुक्तात्मा कथं न ज्ञास्यसि प्रभो ॥ 2.31'
+  translation: 'Thus, O Lord, what you have said has not been cleansed by our others.
+
+    O Lord, how can You not understand each one of Your devoted souls? 2.31'
+- sanskrit: 'भवल्लब्धवरोदीर्णस्तारकाख्यो महासुरः ।
+
+    उपप्लवाय लोकानां धूमकेतुरिवोत्थितः ॥ 2.32'
+  translation: 'The great demon named Tārāka, who had received the boon from you,
+    was destroyed.
+
+    He rose up like a flame of smoke to flood the worlds. 2.32'
+- sanskrit: 'पुरे तावन्तमेवास्य तनोति रविरातपम्।
+
+    दीर्घिकाकमलोन्मेषो यावन्मात्रेण साध्यते ॥ 2.33'
+  translation: 'The sun is shining so much in the city.
+
+    The rise of a long lotus flower can be achieved by just as long as it takes. 2.33'
+- sanskrit: 'सर्वाभिः सर्वदा चन्द्रस्तं कलाभिर्निषेवते ।
+
+    नादत्ते केवलां लेखां हरचूडामणीकृताम्॥ 2.34'
+  translation: 'The moon is always served by all the arts.
+
+    He does not accept a mere inscription adorned with the pearl of Harachuda 2.34'
+- sanskrit: 'व्यावृत्तगतिरुद्याने कुसुमस्तेयसाध्वसात्।
+
+    न वाति वायुस्तत्पार्श्वे तालवृन्तानिलाधिकम्॥ 2.35'
+  translation: 'They turned their movements in the garden for fear of stealing flowers
+
+    The wind does not blow beyond the palm trees 2.35'
+- sanskrit: 'पर्यायसेवामुत्सृज्य पुष्पसम्भारतत्पराः ।
+
+    उद्यानपालसामान्यमृतवस्तमुपासते ॥ 2.36'
+  translation: 'They gave up the service of the alternative and devoted themselves
+    to the arrangement of flowers.
+
+    They worship the nectar of the garden keepers. 2.36'
+- sanskrit: 'तस्योपायनयोग्यानि रत्नानि सरितां पतिः ।
+
+    कथमप्यम्भसामन्तरा निष्पत्तेः प्रतीक्षते ॥ 2.37'
+  translation: 'The lord of the rivers gave him gems worthy of his gift
+
+    Somehow the waters are waiting for the water to come out. 2.37'
+- sanskrit: 'ज्वलन्मणिशिखाश्चैनं वासुकिप्रमुखा निशि ।
+
+    स्थिरप्रदीपतामेत्य भुजङ्गाः पर्युपासते ॥ 2.38'
+  translation: 'At night the crests of the demigods, headed by Vāsuki, appeared to
+    him with flaming jewels.
+
+    The serpents worship the fixed lamp. 2.38'
+- sanskrit: 'तत्कृतानुग्रहापेक्षी तं मुहुर्दूतहारितैः ।
+
+    अनुकूलयतीन्द्रोऽपि कल्पद्रुमविभूषणैः ॥ 2.39'
+  translation: 'The messengers repeatedly deprived him of his mercy
+
+    Indra also favored them with ornaments made of Kalpa trees. 2.39'
+- sanskrit: 'इत्थमाराध्यमानोऽपि क्लिश्नाति भुवनत्रयम्।
+
+    शाम्येत्प्रत्यपकारेण नोपकारेण दुर्जनः ॥ 2.40'
+  translation: 'Even though he is worshiped in this way, he suffers the three worlds.
+
+    A wicked person should be appeased by reciprocating his actions and not by helping
+    others 2.40'
+- sanskrit: 'तेनामरवधूहस्तैः सदयालूनपल्लवाः ।
+
+    अभिज्ञाश्छेदपातानां क्रियन्ते नन्दनद्रुमाः ॥ 2.41'
+  translation: 'Then the bride of the immortals held the leaves of the lotus flower
+    in her hands.
+
+    The trees of the Nandana trees are cut down by those who know them 2.41'
+- sanskrit: 'वीज्यते स हि संसुप्तः श्वाससा साधारणानिलैः ।
+
+    चामरैः सुरवन्दीनां वाष्पसीकरवर्षिभिः ॥ 2.42'
+  translation: 'He is being sown, for he is asleep, breathing in ordinary air.
+
+    The chamaras of the goddesses rained down steam and dew. 2.42'
+- sanskrit: 'उत्पाट्य मेरुश‍ृङ्गाणि क्षुण्णानि हरितां खुरैः ।
+
+    आक्रीडपर्वतास्तेन कल्पिताः स्वेषु वेश्मसु ॥ 2.43'
+  translation: 'With his hooves he uprooted the peaks of Mount Meru and crushed them
+    to pieces.
+
+    He built mountains for playing in his own houses. 2.43'
+- sanskrit: 'मन्दाकिन्याः पयःशेषं दिग्वारणमदाविलम्।
+
+    हेमाम्भोरुहसस्यानां तद्वाप्यो धां साम्प्रतम्॥ 2.44'
+  translation: 'The remaining milk of the river Mandakini was drunk by the elephants
+    of the directions
+
+    At present it is available to the crops of golden lotuses 2.44'
+- sanskrit: 'भुवनालोकनप्रीतिः स्वर्गिभिर्नानुभूयते ।
+
+    खिलीभूते विमानानां तदापातभयात्पथि ॥ 2.45'
+  translation: 'The pleasure of looking at the world is not felt by the heavenly beings.
+
+    When the airplanes were empty, they were afraid of crashing on the road. 2.45'
+- sanskrit: 'यज्वभिः सम्भृतं हव्यं विततेष्वध्वरेषु सः ।
+
+    जातवेदोमुखान्मायी मिषतामाच्छिनत्ति नः ॥ 2.46'
+  translation: 'The sacrifices were filled with oblations and the sacrifices were
+    spread out.
+
+    From the mouth of the Jata Veda, the illusory energy cuts us off as we look. 2.46'
+- sanskrit: 'उच्चैरुच्चैःश्रवास्तेन हयरत्नमहारि च ।
+
+    देहबद्धमिवेन्द्रस्य चिरकालार्जितं यशः ॥ 2.47'
+  translation: 'He shouted loudly and stole the horse’s gems.
+
+    Indra’s long-earned fame seemed to be bound to his body. 2.47'
+- sanskrit: 'तस्मिन्नुपायाः सर्वे नः क्रूरे प्रतिहतक्रियाः ।
+
+    वीर्यवन्त्यौषधानीव विकारे सान्निपातिके ॥ 2.48'
+  translation: 'All our efforts in that cruel way have been repulsed.
+
+    They are as potent as herbs when they are transformed into conjunctions. 2.48'
+- sanskrit: 'जयाशा यत्र चास्माकं प्रतिघातोत्थितार्चिषा ।
+
+    हरिचक्रेण तेनास्य कण्ठे निष्कमिवार्पितम्॥ 2.49'
+  translation: 'Wherever our hope of victory is, the flames of the counterattack have
+    risen.
+
+    The monkey''s wheel placed a coin around his neck 2.49'
+- sanskrit: 'तदीयास्तोयदेष्वद्य पुष्करावर्तकादिषु ।
+
+    अभ्यस्यन्ति तटाघातं निर्जितैरावता गजाः ॥ 2.50'
+  translation: 'Today, in the waters of that river, such as the Puṣkaravartaka,
+
+    The elephants of the defeated Airavata are practicing their attack on the banks
+    2.50'
+- sanskrit: 'तदिच्छामो विभो ! सृष्टं सेनान्यं तस्य शान्तये ।
+
+    कर्मबन्धच्छिदं धर्मं भवस्येव मुमुक्षवः ॥ 2.51'
+  translation: 'That’s what we want, Lord! Another army was created to appease him
+
+    Those who seek liberation from material bondage are like religious principles
+    that break the bondage of karma. 2.51'
+- sanskrit: 'गोत्पारं सुरसैन्यानां यं पुरस्कृत्य गोत्रभित्।
+
+    प्रत्यानेष्यति शत्रुभ्यो वन्दीमिव जयश्रियम्॥ 2.52'
+  translation: 'The goatpara of the armies of the gods whom the gotrabhit rewarded.
+
+    He will restore victory and prosperity to his enemies like a worshiper 2.52'
+- sanskrit: 'वचस्यवसिते तस्मिन्ससर्ज गिरमात्मभूः ।
+
+    गर्जितानन्तरां वृष्टिं सौभाग्येन जिगाय सा ॥ 2.53'
+  translation: 'When the words were finished, the self-born Lord created a voice.
+
+    Fortunately she conquered the rain that followed the thunder. 2.53'
+- sanskrit: 'सम्पत्स्यते वः कामोऽयं कालः कश्चित्प्रतीक्ष्यताम्।
+
+    न त्वस्य सिद्धौ यास्यामि सर्गव्यापारमात्मना ॥ 2.54'
+  translation: 'Your desire will be fulfilled Wait for some time
+
+    I will not go into the business of creation by myself in the perfection of this
+    world. 2.54'
+- sanskrit: 'इतः स दैत्यः प्राप्तश्रीर्नेत एवार्हति क्षयम्।
+
+    विषवृक्षोऽपि संवर्ध्य स्वयं छेत्तुमसाम्प्रतम्॥ 2.55'
+  translation: 'From here that demon who has attained glory does not deserve to be
+    destroyed
+
+    Even a poisonous tree can be cultivated and cut down by itself at this time 2.55'
+- sanskrit: 'वृतं तेनेदमेव प्राङ्मया चास्मै प्रतिश्रुतम्।
+
+    वरेण शमितं लोकानलं दग्धुं हि तत्तपः ॥ 2.56'
+  translation: 'He asked for this and I promised him this very thing in the past.
+
+    That austerity was to burn the fire of the world, which was extinguished by the
+    boon. 2.56'
+- sanskrit: 'संयुगे सांयुगीनं तमुद्यतं प्रसहेत कः ।
+
+    अंशादृते निषिक्तस्य नीललोहितरेतसः ॥ 2.57'
+  translation: 'Who can bear him ready to fight in battle?
+
+    Except for a portion of the blue and red blood that was sprinkled on it 2.57'
+- sanskrit: 'स हि देवः परं ज्योतिस्तमःपारे व्यवस्थितम्।
+
+    परिच्छिन्नप्रभावर्द्धिर्न मया न च विष्णुना ॥ 2.58'
+  translation: 'For that God is the Supreme Light, dwelling on the other side of darkness.
+
+    Neither I nor Lord Viṣṇu can increase His power when it is interrupted. 2.58'
+- sanskrit: 'उमारूपेण ते यूयं संयमस्तिमितं मनः ।
+
+    शम्भोर्यतध्वमाक्रष्टुमयस्कान्तेन लोहवत्॥ 2.59'
+  translation: 'In the form of Uma, you are the mind that is controlled and limited.
+
+    O Sambho, strive to pull him with the end of iron like iron. 2.59'
+- sanskrit: 'उभे एव क्षमे वोढुमुभयोर्बीजमाहितम्।
+
+    सा वा शम्भोस्तदीया वा मूर्तिर्जलमयी मम ॥ 2.60'
+  translation: 'Both are able to carry the seeds of both.
+
+    Either that Śambhu or His idol is My watery idol. 2.60'
+- sanskrit: 'तस्यात्मा शितिकण्ठस्य सैनापत्यमुपेत्य वः ।
+
+    मोक्ष्यते सुरवन्दीनां वेणीर्वीर्यविभूतिभिः ॥ 2.61'
+  translation: 'That soul, Shitikantha, has come to you as the commander of the army.
+
+    The braids of the goddesses will be released by their prowess and opulence. 2.61'
+- sanskrit: 'इति व्याहृत्य विबुधान्विश्वयोनिस्तिरोदधे ।
+
+    मनस्याहित-कर्तव्यास्तेऽपि देवा दिवं ययुः ॥ 2.62'
+  translation: 'After speaking these words to the demigods, the universal father disappeared.
+
+    Those demigods who had done harm to the mind also went to heaven. 2.62'
+- sanskrit: 'तत्र निश्चित्य कन्दर्पमगमत्पाकशासनः ।
+
+    मनसा कार्यसंसिद्धौ त्वराद्विगुणरंहसा ॥ 2.63'
+  translation: 'Having decided there, the king of cooking went to Cupid.
+
+    The mind accomplishes its task with twice as much haste. 2.63'
+- sanskrit: 'अथ स ललितयोषिद्भ्रूलताचारुश‍ृङ्गं
+
+    रतिवलयपदाङ्के चापमासज्य कण्ठे ।
+
+    सहचरमधुहस्तन्यस्तचूताङ्कुरास्त्रः
+
+    शतमखमुपतस्थे प्राञ्जलिः पुष्पधन्वा ॥ 2.64'
+  translation: 'Then he looked at the beautiful woman with her eyebrows and beautiful
+    horns
+
+    He tied a bow around his neck at the foot of a ring of conjugal pleasure.
+
+    The weapon of the chuta sprouts placed in the hands of the companion honey
+
+    The bow of flowers offered the hundred sacrifices with folded hands. 2.64'
+---
+
+
+================================================================
 FILE: ./content/chapters/kumarasambhavam-sarga-1.md
 ================================================================
 
@@ -151,6 +1084,20 @@ draft: false
 काशिका पुराधिनाथ कालभैरवं भजे॥ १॥
 
 ================================================================
+FILE: ./content/poems/2026-07-12-.md
+================================================================
+
+---
+title: न्यस्ताक्षरा धातुरसेन
+poet: Kalidasa
+form: अनुष्टुप
+draft: false
+date: 2026-07-12
+---
+न्यस्ताक्षरा धातुरसेन यत्र भूर्जत्वचः कुञ्जरबिन्दुशोणाः ।  
+व्रजन्ति विद्याधरसुन्दरीणामूनङ्गलेखक्रिययोपयोगम्॥ 1.7
+
+================================================================
 FILE: ./content/poets/2026-03-07-kalidas.md
 ================================================================
 
@@ -214,7 +1161,7 @@ draft: false
 FILE: ./hugo.yaml
 ================================================================
 
-baseURL: "https://sanskrit-kavya-lok.netlify.app/"
+baseURL: "https://sanskrit-kavyalok.netlify.app/"
 languageCode: "sa"
 title: "संस्कृत काव्य लोक"
 outputs:
@@ -268,26 +1215,60 @@ FILE: ./layouts/books/list.html
         <h1 class="collection-title">{{ .Title }}</h1>
     </div>
 
-    <div class="book-grid">
+    <div class="book-list">
         {{ if .Sections }}
             {{ range .Sections }}
-            <a href="{{ .RelPermalink }}" class="book-card">
-                <h2 class="book-card-title">{{ .Title }}</h2>
-                <p class="book-card-meta">Enter Library &rarr;</p>
+            <a href="{{ .RelPermalink }}" class="book-list-row">
+                <span class="book-list-title">{{ .Title }}</span>
+                <svg class="book-list-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
             </a>
             {{ end }}
-        
         {{ else }}
             {{ range .RegularPages.ByWeight }}
-            <a href="{{ .RelPermalink }}" class="chapter-card">
-                <h2 class="chapter-card-title">{{ .Title }}</h2>
-                <p class="chapter-card-meta">Read Sarga &rarr;</p>
+            <a href="{{ .RelPermalink }}" class="book-list-row">
+                <span class="book-list-title">{{ .Title }}</span>
+                <svg class="book-list-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
             </a>
             {{ end }}
         {{ end }}
     </div>
 </div>
 {{ end }}
+
+================================================================
+FILE: ./layouts/books/single.html
+================================================================
+
+{{ define "main" }}
+<div class="poem-page">
+    <div class="poem-header">
+        <h1 class="poem-title">{{ .Title }}</h1>
+        
+        <div class="translation-toggle-wrapper">
+            <label class="theme-switch" for="trans-toggle">
+                <input type="checkbox" id="trans-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">अनुवाद / Show Translation</span>
+        </div>
+    </div>
+
+    <div class="poem-body" id="chapter-content">
+        {{ range .Params.shlokas }}
+        <div class="shloka-block">
+            <p class="shloka-text">{{ .sanskrit | safeHTML }}</p>
+            
+            <p class="en-translation">{{ .translation | safeHTML }}</p>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
 
 ================================================================
 FILE: ./layouts/chapters/single.html
@@ -660,7 +1641,7 @@ FILE: ./layouts/index.html
 
       <div class="rk-poem-list">
         {{ range first 6 (where .Site.RegularPages "Type" "poems") }}
-        <a href="{{ .Permalink }}" class="rk-poem-row">
+        <a href="{{ .RelPermalink }}" class="rk-poem-row">
           <div class="rk-poem-row-text">
             <h3 class="rk-poem-row-title">{{ .Title }}</h3>
             {{ with .Params.poet }}
@@ -691,7 +1672,7 @@ FILE: ./layouts/index.html
           <span class="lang-en">Featured Collection</span>
         </h2>
       </div>
-      <a href="{{ .Permalink }}" class="rk-collection-banner">
+      <a href="{{ .RelPermalink }}" class="rk-collection-banner">
         {{ with .Params.image }}
         <div class="rk-collection-banner-img" style="background-image: url('{{ . }}')"></div>
         {{ else }}
@@ -721,7 +1702,7 @@ FILE: ./layouts/index.html
       </div>
       <div class="rk-theme-cloud">
         {{ range .Site.Taxonomies.themes }}
-        <a href="{{ .Page.Permalink }}" class="rk-theme-pill">
+        <a href="{{ .Page.RelPermalink }}" class="rk-theme-pill">
           <span class="lang-hi">{{ .Page.Title }}</span>
           <span class="lang-en">{{ .Page.Params.title_en | default .Page.Title }}</span>
           <span class="rk-theme-count">{{ .Count }}</span>
@@ -760,7 +1741,7 @@ FILE: ./layouts/index.html
       </div>
       <div class="rk-poet-stack">
         {{ range first 4 (where .Site.RegularPages "Type" "poets") }}
-        <a href="{{ .Permalink }}" class="rk-poet-row">
+        <a href="{{ .RelPermalink }}" class="rk-poet-row">
           {{ with .Params.image }}
           <img src="{{ . }}" alt="{{ $.Title }}" class="rk-poet-avatar">
           {{ else }}
@@ -815,7 +1796,7 @@ FILE: ./layouts/index.html
         </a>
       </div>
       {{ range first 3 (where .Site.RegularPages "Type" "collections") }}
-      <a href="{{ .Permalink }}" class="rk-mini-collection-row">
+      <a href="{{ .RelPermalink }}" class="rk-mini-collection-row">
         <div class="rk-mini-coll-thumb">
           {{ with .Params.image }}<img src="{{ . }}" alt="">{{ else }}<span>{{ substr .Title 0 1 }}</span>{{ end }}
         </div>
@@ -909,7 +1890,7 @@ FILE: ./layouts/partials/collection-card.html
 ================================================================
 
 <div class="collection-card">
-  <a href="{{ .Permalink }}" class="collection-card-link">
+  <a href="{{ .RelPermalink }}" class="collection-card-link"></a>
     <div class="collection-card-image">
       {{ with .Params.image }}
       <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
@@ -937,7 +1918,7 @@ FILE: ./layouts/partials/poem-card.html
 ================================================================
 
 <div class="poem-card">
-  <a href="{{ .Permalink }}" class="poem-card-link">
+  <a href="{{ .RelPermalink }}" class="poem-card-link"></a>
     <h3 class="card-title">{{ .Title }}</h3>
     {{ with .Params.poet }}
     <p class="card-poet">{{ . }}</p>
@@ -965,7 +1946,7 @@ FILE: ./layouts/partials/poet-card.html
 ================================================================
 
 <div class="poet-card">
-  <a href="{{ .Permalink }}">
+  <a href="{{ .RelPermalink }}"></a>
     {{ with .Params.image }}
     <img src="{{ . }}" alt="{{ $.Title }}" class="poet-thumb" loading="lazy">
     {{ else }}
@@ -990,14 +1971,25 @@ FILE: ./layouts/poems/list.html
     <h1>काव्यानि <span class="en">Poems</span></h1>
     <p>{{ len .Pages }} काव्यानि / poems</p>
   </header>
-  <div class="poem-grid">
+  <div class="content-list">
     {{ range .Pages }}
-    {{ partial "poem-card.html" . }}
+    <a href="{{ .RelPermalink }}" class="content-list-row">
+      <div class="content-list-text">
+        <span class="content-list-title">{{ .Title }}</span>
+        {{ with .Params.poet }}<span class="content-list-sub">{{ . }}</span>{{ end }}
+      </div>
+      <div class="content-list-right">
+        {{ with .Params.form }}<span class="rk-form-badge">{{ . }}</span>{{ end }}
+        {{ if .Params.audio_url }}<span class="rk-audio-dot" title="Audio available">🎵</span>{{ end }}
+        <svg class="content-list-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
     {{ end }}
   </div>
 </div>
 {{ end }}
-
 
 ================================================================
 FILE: ./layouts/poems/single.html
@@ -1008,10 +2000,17 @@ FILE: ./layouts/poems/single.html
   <header class="poem-header">
     <h1 class="poem-title">{{ .Title }}</h1>
     {{ with .Params.poet }}
-    <p class="poem-poet">
-      <a href="/poets/{{ . | urlize }}/">{{ . }}</a>
-    </p>
-    {{ end }}
+{{ $poetName := . }}
+{{ $poetPages := where $.Site.RegularPages "Type" "poets" }}
+{{ $poetPages = where $poetPages "Title" $poetName }}
+<p class="poem-poet">
+  {{ with index $poetPages 0 }}
+  <a href="{{ .RelPermalink }}">{{ $poetName }}</a>
+  {{ else }}
+  {{ $poetName }}
+  {{ end }}
+</p>
+{{ end }}
     {{ if .Params.themes }}
       {{ $themes := .Params.themes }}
       {{ if not (reflect.IsSlice $themes) }}
@@ -1053,14 +2052,31 @@ FILE: ./layouts/poets/list.html
     <h1>कवयः <span class="en">Poets</span></h1>
     <p>{{ len .Pages }} कवयः / poets</p>
   </header>
-  <div class="poet-grid">
+  <div class="content-list">
     {{ range .Pages }}
-    {{ partial "poet-card.html" . }}
+    <a href="{{ .RelPermalink }}" class="content-list-row">
+      <div class="content-list-left">
+        {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="content-list-avatar">
+        {{ else }}
+        <div class="content-list-avatar content-list-avatar-fallback">{{ substr .Title 0 1 }}</div>
+        {{ end }}
+        <div class="content-list-text">
+          <span class="content-list-title">
+            <span class="lang-hi">{{ .Title }}</span>
+            <span class="lang-en">{{ .Params.title_en | default .Title }}</span>
+          </span>
+          {{ with .Params.dates }}<span class="content-list-sub">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      <svg class="content-list-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
     {{ end }}
   </div>
 </div>
 {{ end }}
-
 
 ================================================================
 FILE: ./layouts/poets/single.html
@@ -1083,10 +2099,13 @@ FILE: ./layouts/poets/single.html
       {{ with .Params.region }}<p class="region">{{ . }}</p>{{ end }}
     </div>
   </header>
+
   <div class="poet-bio">
     {{ .Content }}
   </div>
+
   {{ $poet := .Title }}
+
   {{ $poems := where .Site.RegularPages "Params.poet" $poet }}
   {{ if $poems }}
   <section class="poet-poems">
@@ -1094,16 +2113,47 @@ FILE: ./layouts/poets/single.html
       <span class="lang-hi">रचनाएँ</span>
       <span class="lang-en">Works</span>
     </h2>
-    <div class="poem-grid">
+    <div class="rk-poem-list">
       {{ range $poems }}
-      {{ partial "poem-card.html" . }}
+      <a href="{{ .RelPermalink }}" class="rk-poem-row">
+        <div class="rk-poem-row-text">
+          <h3 class="rk-poem-row-title">{{ .Title }}</h3>
+        </div>
+        <div class="rk-poem-row-right">
+          {{ with .Params.form }}
+          <span class="rk-form-badge">{{ . }}</span>
+          {{ end }}
+          {{ if .Params.audio_url }}
+          <span class="rk-audio-dot" title="Audio available">🎵</span>
+          {{ end }}
+          <svg class="rk-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ $books := where (where .Site.Pages "Kind" "section") "Type" "books" }}
+  {{ $books = where $books "Params.poet" $poet }}
+  {{ if $books }}
+  <section class="poet-books">
+    <h2>
+      <span class="lang-hi">ग्रन्थाः</span>
+      <span class="lang-en">Books</span>
+    </h2>
+    <div class="book-grid">
+      {{ range $books }}
+      <a href="{{ .RelPermalink }}" class="book-card">
+        <h2 class="book-card-title">{{ .Title }}</h2>
+        <p class="book-card-meta">Enter Library &rarr;</p>
+      </a>
       {{ end }}
     </div>
   </section>
   {{ end }}
 </article>
 {{ end }}
-
 
 ================================================================
 FILE: ./layouts/search/single.html
@@ -2838,6 +3888,151 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/* ============================================
+   BOOK & CHAPTER LIST (row style)
+============================================ */
+.book-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.book-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s, padding-left 0.2s;
+}
+
+.book-list-row:last-child { border-bottom: none; }
+
+.book-list-row:hover {
+    background: #1e0a38;
+    padding-left: 1.85rem;
+}
+
+.book-list-title {
+    font-family: var(--font-hi);
+    font-size: 1.1rem;
+    color: var(--gold);
+}
+
+.book-list-arrow {
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.book-list-row:hover .book-list-arrow {
+    color: var(--gold);
+    transform: translate(2px, -2px);
+}
+
+/* ============================================
+   POEMS & POETS — LIST ROWS
+============================================ */
+.content-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.content-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s, padding-left 0.2s;
+    gap: 1rem;
+}
+
+.content-list-row:last-child { border-bottom: none; }
+
+.content-list-row:hover {
+    background: #1e0a38;
+    padding-left: 1.85rem;
+}
+
+.content-list-left {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    min-width: 0;
+}
+
+.content-list-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.content-list-title {
+    font-family: var(--font-hi);
+    font-size: 1.05rem;
+    color: var(--gold);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-list-sub {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin-top: 0.15rem;
+}
+
+.content-list-right {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.content-list-arrow {
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.content-list-row:hover .content-list-arrow {
+    color: var(--gold);
+    transform: translate(2px, -2px);
+}
+
+.content-list-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-light);
+    flex-shrink: 0;
+}
+
+.content-list-avatar-fallback {
+    background: #2a0848;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: var(--font-hi);
 }
 
 .book-card:hover, .chapter-card:hover {
